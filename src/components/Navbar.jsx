@@ -1,15 +1,12 @@
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:166749758.
-jsx
 import { NavLink } from "react-router-dom";
-import { clsx } from "clsx";
+import clsx from "clsx";
 
-const Navbar = () =>
- {
+const Navbar = () => {
   return (
-    <nav className="bg-whit shadow-sm">
+    <nav className=" bg-white shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <div className="flex items-center">
+        <div className="flex justify-center items-center py-4">
+          <div className="flex gap-5 items-center">
             <NavLink
               to="/"
               className={({ isActive }) =>
@@ -40,8 +37,17 @@ const Navbar = () =>
             >
               Contact
             </NavLink>
+            <NavLink
+              to="/attrazioni"
+              className={({ isActive }) =>
+                clsx("text-gray-700 hover:text-gray-900", {
+                  "font-bold": isActive,
+                })
+              }
+            >
+              Atrazioni
+            </NavLink>
           </div>
-          {/* Aggiungi altri link di navigazione qui */}
         </div>
       </div>
     </nav>
