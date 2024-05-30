@@ -5,7 +5,7 @@ import React from "react";
 export default function footer() {
 
   return (
-    <div className=" flex flex-col bg-slate-50 sm:bg-inherit min-h-screen font-alata">
+    <div className=" flex font-alata">
       <h1>footer</h1>
     </div>
   );
