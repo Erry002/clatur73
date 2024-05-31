@@ -1,0 +1,16 @@
+
+  {
+    "mainObjects": "bg-slate-500",
+    "childObjects": "bg-orange-600",
+    "mainIconObjects":" green",
+    "textPrimary": "",
+    "textSecondary": "text-gray-500",
+    "backgroundPrimary": "bg-white",
+    "backgroundSecondary": "bg-gray-100",
+    "buttonPrimary": "bg-red-500",
+    "buttonSecondary": "bg-yellow-500",
+    "borderPrimary": "border-gray-300",
+    "borderSecondary": "border-gray-500"
+  }
+  
+  

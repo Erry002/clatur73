@@ -34,7 +34,7 @@ const Navbar = () => {
                     })
                   }
                 >
-                  MeloSito
+                  Banco prova Sito
                 </NavLink>
               </div>
               <div className="flex gap-5 text-lg justify-end items-center">
@@ -92,7 +92,7 @@ const Navbar = () => {
                     })
                   }
                 >
-                  MeloSito
+                  Banco prova Sito
                 </NavLink>
               </div>
               <div className=" flex justify-end items-center">
