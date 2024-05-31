@@ -64,7 +64,7 @@ export default function Home() {
         {/* sezione info */}
         <section className="flex justify-between mx-4 mt-2">
           <div className="flex flex-col items-center justify-center">
-            <FaWifi size={50} color={colors.mainIconObjects}/>
+            <FaWifi size={50} color={colors.mainIconObjects}/>git
             <h2 className="text-center leading-5 text-sm">WiFi Gratuito</h2>
           </div>
           <div className="flex flex-col items-center justify-center">
