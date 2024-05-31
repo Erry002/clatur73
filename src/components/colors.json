@@ -1,6 +1,6 @@
 
   {
-    "mainObjects": "bg-slate-500",
+    "mainObjects": "bg-slate-200 rounded-xl",
     "childObjects": "bg-orange-600",
     "mainIconObjects":" green",
     "textPrimary": "",

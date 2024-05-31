@@ -143,7 +143,7 @@ const Navbar = () => {
                               })
                             }
                           >
-                            Atrazioni
+                            Attrazioni
                           </NavLink>
                         </div>
                       </SheetDescription>
