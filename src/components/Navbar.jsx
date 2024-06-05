@@ -1,8 +1,8 @@
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
-import { Link } from "react-router-dom";
 import React from "react";
 import { FiMenu } from 'react-icons/fi';
+import colors from "../components/colors.json";
 
 import {
   Sheet,
@@ -16,28 +16,30 @@ import {
 const variants = {
   base: "text-gray-700 hover:text-black",
   active: "text-red-500 hover:text-red-500 underline underline-offset-2",
-}
+};
 
 const Navbar = () => {
+  const { childObjects } = colors;
+
   return (
-    <nav className=" bg-white shadow-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-center items-center py-4">
-          <div className=" hidden sm:block w-full pr-10">
-            <div className=" flex justify-between items-center max-w-7xl">
+    <nav className={`shadow-sm bg-[#FEFAF0] font-Bodoni`}>
+      <div className="container px-4 mx-auto">
+        <div className="flex items-center justify-center py-4">
+          <div className="hidden w-full pr-10 sm:block">
+            <div className="flex items-center justify-between max-w-7xl font-Bodoni">
               <div>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    clsx(" uppercase font-bold text-xl", {
+                    clsx(" uppercase font-bold text-[#403F2B] text-xl", {
                       "": isActive,
                     })
                   }
                 >
-                  Banco prova Sito
+                  Clatur73
                 </NavLink>
               </div>
-              <div className="flex gap-5 text-lg justify-end items-center">
+              <div className="flex items-center justify-end gap-5 text-lg">
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
@@ -81,30 +83,30 @@ const Navbar = () => {
               </div>
             </div>
           </div>
-          <div className=" block sm:hidden w-full">
-            <div className=" flex justify-between items-center max-w-7xl">
+          <div className="block w-full sm:hidden">
+            <div className="flex items-center justify-between max-w-7xl font-Bodoni">
               <div>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    clsx(" uppercase font-bold text-xl", {
+                    clsx(" font-bold text-xl font-Bodoni", {
                       "": isActive,
                     })
                   }
                 >
-                  Banco prova Sito
+                  Clatur 73
                 </NavLink>
               </div>
-              <div className=" flex justify-end items-center">
+              <div className="flex items-center justify-end ">
                 <Sheet>
                   <SheetTrigger>
-                    <FiMenu size={28} style={{ color: "green" }} />
+                    <FiMenu size={28} style={{ color: "#403F2B" }} />
                   </SheetTrigger>
                   <SheetContent>
                     <SheetHeader>
-                      <SheetTitle className="text-3xl font-bold text-center mb-4">Menu</SheetTitle>
+                      <SheetTitle className="mb-4 text-3xl font-bold text-center font-Bodoni">Menu</SheetTitle>
                       <SheetDescription>
-                        <div className=" flex flex-col items-center gap-4 text-lg">
+                        <div className="flex flex-col items-center gap-4 text-lg font-Bodoni">
                           <NavLink
                             to="/"
                             className={({ isActive }) =>

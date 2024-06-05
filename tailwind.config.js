@@ -2,11 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx,json}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
-    './src/components/colors.json'
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx,json}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
+    "./src/components/colors.json",
   ],
   prefix: "",
   theme: {
@@ -18,7 +18,17 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        display: "Bodoni Moda", // Adds a new `font-display` class
+        Bodoni: ['"Bodoni Moda"'],
+      },
+
       colors: {
+        olive: "#403F2B",
+        grigio: "#DDDDCC",
+        giallino: "#F3F1C4",
+        gialloSc: "#BFBF7E",
+        gialloPa: "#FEFAF0",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -75,4 +85,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

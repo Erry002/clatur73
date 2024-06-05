@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import * as React from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button.jsx";
+import TextBox from "../components/TextBox.jsx";
+import TextArea from "../components/TextArea.jsx";
+
 import colors from "../components/colors.json";
 
 import { FaWifi } from "react-icons/fa6";
@@ -25,11 +29,10 @@ const images = [casa_1, casa_2, casa_3];
 export default function Home() {
   return (
     <>
-      <div className="min-h-screen flex flex-col">
-        <section>
-          {" "}
+      <div className="flex flex-col w-full min-h-screen overflow-x-hidden font-Bodoni">
+        <section className="overflow-x-hidden">
           {/*carosello immagini */}
-          <div className="flex justify-center h-[530px]">
+          <div className="relative justify-center h-full overflow-x-hidden">
             <Carousel
               opts={{
                 align: "start",
@@ -38,20 +41,34 @@ export default function Home() {
                 swipe: true,
               }}
               orientation="horizontal"
-              className="w-full"
+              className="w-full overflow-x-hidden"
             >
-              <CarouselContent className=" ">
+              <div className="absolute z-10 h-full w-full bg-[#00000060]">
+                <h6 className="absolute text-white text-4xl font-[500] top-[90px] left-12">
+                  Benvenuti da <br /> Clature73
+                </h6>
+                <p className="absolute text-white top-[175px] font-[400] left-12 text-lg">
+                  Casa vacanza con calore, confort e <br />carattere
+                </p>
+                <Button
+                  variant="outline"
+                  className=" bg-transparent absolute font-sans font-[300] text-white z-10 top-[260px] left-12 rounded-3xl"
+                >
+                  Chiedi disponibilità
+                </Button>
+              </div>
+              <CarouselContent className="">
                 {images.map((image, index) => (
-                  <CarouselItem key={index} className="pt-1 md:basis-full w-52">
-                    <div className="p-1">
+                  <CarouselItem key={index} className=" md:basis-full">
+                    <div className="">
                       <Card>
                         <CardContent
-                          className={`flex w-full h-[500px] ${colors.mainObjects} items-center justify-center p-4 rounded-xl`}
+                          className={`flex w-full h-[500px] ${colors.mainObjects} items-center justify-center`}
                         >
                           <img
                             src={image}
                             alt={`foto casa ${index + 1}`}
-                            className={`w-full h-full object-cover rounded-xl border ${colors.borderSecondary}`}
+                            className={`w-full h-full object-cover ${colors.borderSecondary}`}
                           />
                         </CardContent>
                       </Card>
@@ -59,124 +76,89 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <div className="flex justify-between -mt-[260px] mx-12 ">
+              {/* <div className="absolute z-40 -mt-[250px] ">
                 <CarouselPrevious
-                  className={`${colors.childObjects} w-12 h-12`}
+                  className={`${colors.childObjects} w-8 h-8`}
                 />
-                <CarouselNext className={`${colors.childObjects} w-12 h-12`} />
-              </div>
+                <CarouselNext className={`${colors.childObjects} w-8 h-8`} />
+              </div> */}
             </Carousel>
           </div>
         </section>
-
-        {/* sezione info */}
-        <section className="flex justify-between mx-4 mt-2">
-          <div className="flex flex-col items-center justify-center">
-            <FaWifi size={50} color={colors.mainIconObjects} />
-            <h2 className="text-center leading-5 text-sm">WiFi Gratuito</h2>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <FaBed size={50} color={colors.mainIconObjects} />
-            <h2 className="text-center leading-5 text-sm">
-              Stanze confortevoli{" "}
-            </h2>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <MdLocalParking size={50} color={colors.mainIconObjects} />
-            <h2 className="text-center leading-5 text-sm">
-              Parcheggio Gratuito
-            </h2>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            <RiCustomerService2Fill size={50} color={colors.mainIconObjects} />
-            <h2 className="text-center leading-5 text-sm">Servizio h24</h2>
-          </div>
-        </section>
-
-        {/*Sezione posizione*/}
-        <section>
-          <div className={`mx-4 my-4 ${colors.mainObjects} p-4 text-left`}>
-            <h2>Qualcosa sulla mia dimora... </h2>
-            <p className="text-sm leading-5 mt-4">
-              Clatur73 is a recently renovated apartment in Catania, where
-              guests can make the most of its private beach area and garden.
-              This beachfront property offers access to free WiFi and free
-              private parking. The property is non-smoking and is set 2.3 km
-              from Spiaggetta di Ognina.
-            </p>
-            <p className="text-sm leading-5 mt-4">
-              The spacious apartment with a balcony and garden views features 2
-              bedrooms, a living room, a flat-screen TV, an equipped kitchen
-              with an oven and a microwave, and 1 bathroom with a bidet. Towels
-              and bed linen are featured in the apartment. The property offers
-              city views.
-            </p>
-            <p className="text-sm leading-5 mt-4">
-              A restaurant and snack bar can be found on-site.
-            </p>
-            <p className="text-sm leading-5 mt-4">
-              A variety of wellness packages are available for guests to get
-              rejuvenated on-site. For guests with children, the apartment
-              offers outdoor play equipment. Both a bicycle rental service and a
-              car rental service are available at Clatur73, while cycling and
-              walking tours can be enjoyed nearby.
-            </p>
-            <p className="text-sm leading-5 mt-4">
-              Catania Piazza Duomo is 6.7 km from the accommodation, while
-              Taormina Cable Car - Mazzaro Station is 46 km away. The nearest
-              airport is Catania Fontanarossa Airport, 11 km from Clatur73. Le
-              distanze nella descrizione della struttura sono calcolate con ©
-              OpenStreetMap
-            </p>
-            <div
-              className={`flex justify-center items-center h-[500px] ${colors.childObjects} rounded-xl p-4 mt-4 shadow-xl`}
-            >
-              <h1 className="drop-shadow-2xl">Mappa google</h1>
+        <section className="">
+          <div className="z-10 flex flex-col items-center px-6 py-2 text-left bg-grigio">
+            <h6 className="py-4 z-10 text-[27px] font-[500] font-Bodoni text-olive">
+              Prenota il tuo soggiorno con me.
+            </h6>
+            {/* <div className="h-[0.1px] w-[70%] justify-center items-center bg-olive"></div> */}
+            <div className="z-10 flex flex-col items-center w-full py-4 ring-2 ring-olive">
+              <h6 className="px-4 pb-4 text-justify">
+                {" "}
+                Contattami persapere se sono disponibili delle camere per vivere
+                una vacanza da sogno.
+              </h6>
+              <p className=" w-[230px] text-justify"></p>
+              <div className=" w-[80%] mb-4">
+                <TextBox
+                  title="Nome Completo"
+                  // value={name}
+                  // onChange={(e) => setName(e.target.value)}
+                  placeholder="Mario Rossi"
+                />
+                <TextBox
+                  title="Email"
+                  // value={name}
+                  // onChange={(e) => setName(e.target.value)}
+                  placeholder="Mariorossi@gmail.com"
+                />
+                <TextBox
+                  title="Numero di tel"
+                  // value={name}
+                  // onChange={(e) => setName(e.target.value)}
+                  placeholder="+39 340 123 1212"
+                />
+                <TextArea
+                  title="Richieste particolari"
+                  cols={10}
+                  rows={30}
+                  placeholder="Ho un animale domestico, "
+                />
+              </div>
+              <Button className="items-center ring-2 ring-olive bg-gialloPa text-olive w-[80%] mb-2">
+                Invia
+              </Button>
             </div>
           </div>
+          <div className="absolute z-0 -bottom-[500px] -left-[540px] w-[1500px] h-[700px] rounded-b-full bg-grigio overflow-hidden"></div>
         </section>
-
-        {/* sezione info */}
+        <section className="overflow-x-hidden">
+          <div className="flex flex-col px-6 text-olive bg-giallino">
+            <h5 className="text-[35px] font-[600] z-10 mt-[40px] leading-10">Qualcosa sulla mia dimora..</h5>
+            <h6 className="text-[25px] font-[500] mt-4">Il tuo comfort e la tua convenienza è la mia priorità</h6>
+            <p className="mt-4 text-lg">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+              assumenda, enim harum fuga nihil quae aspernatur ut labore quam
+              unde vero necessitatibus natus molestiae praesentium vitae rem
+              dolor architecto officiis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Aliquid, eaque incidunt cumque quo laudantium
+              iste deleniti corrupti aut saepe. Laborum voluptatem quam saepe
+              repudiandae dolor blanditiis ea officiis earum! Incidunt.
+            </p>
+          </div> 
+          <div className="px-6 pb-4 bg-giallino">
+            <Button className="font-sans rounded-3xl font-[300] bg-trasparent ring-1 ring-olive hover:bg-grigio text-olive">Scopri di più</Button>
+          </div>
+        </section>
         <section>
-          <div className={` mx-4 ${colors.mainObjects} p-4`}>
-            <h2 className="text-center leading-5 text-xl">
-              Perché prenotare con me?
-            </h2>
-            <p className=" my-4">Perché troverete vicino alla struttura...</p>
-            <h2>Edifici Culturali come:</h2>
-            <div className="flex justify-between">
-              <ol className="list-disc ml-4">
-                <li>Parco Madre Teresa di Calcutta</li>
-                <li>Fontana dei Malavoglia</li>
-                <li>Marsala, Selinunte E Segesta</li>
-                <li>Villa Bellini</li>
-                <li>Palazzo del Toscano</li>
-                <li>Anfiteatro Romano di Catania</li>
-                <li>Palazzo San Demetrio</li>
-                <li>Piazza dell'Università</li>
-                <li>Palazzo Biscari</li>
-                <li>Piazza Duomo</li>
-              </ol>
-              <ol className={`${colors.textSecondary}`}>
-                <li>2,8 km</li>
-                <li>2,9 km</li>
-                <li>3,3 km</li>
-                <li>3,4 km</li>
-                <li>3,7 km</li>
-                <li>3,8 km</li>
-                <li>4,0 km</li>
-                <li>4,1 km</li>
-                <li>4,2 km</li>
-                <li>4,2 km</li>
-              </ol>
-            </div>
+          <div className=" bg-gialloPa">
+            <h5>Gallery</h5>
+            <h6>A un passo dal mare e dalla movida nostra</h6>
+          </div>
+          <div className="grid ">
+            
           </div>
         </section>
       </div>
     </>
   );
 }
-// cose da fare martedì
-//1 da vedere come organizzare il sito e studiare un layout accettabile
-//2 Cercare un set di colori per il sito
-//3 Aggiungere le restanti foto per mostrare la casa, le stanze, la cucina e la spiaggia

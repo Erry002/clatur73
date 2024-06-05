@@ -1,10 +1,20 @@
 
   {
-    "mainObjects": "bg-slate-200 rounded-xl",
-    "childObjects": "bg-orange-600",
-    "mainIconObjects":" green",
-    "textPrimary": "",
-    "textSecondary": "text-gray-500",
+    "mainObjects": "#FEFAF0",
+    "primoColore":"giallo canarino",
+
+    "childObjects": "#403F2B", 
+    "secondoColore":"olive",
+
+    "mainIconObjects":"#F3F1C4", 
+    "terzoColore":"giallino",
+    
+    "textPrimary": "BFBF7E",
+    "quartoColore":"giallo scuro",
+
+    "textSecondary": "#DDDDCC",
+    "quintoColore":"grigio",
+
     "backgroundPrimary": "bg-white",
     "backgroundSecondary": "bg-gray-100",
     "buttonPrimary": "bg-red-500",
