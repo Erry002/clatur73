@@ -84,5 +84,21 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    function ({ addUtilities }) {
+      const newUtilities = {
+        '.scrollbar-hide': {
+          /* Nascondi la scrollbar per WebKit (Chrome, Safari) */
+          '-webkit-overflow-scrolling': 'touch',
+          '-ms-overflow-style': 'none',
+          'scrollbar-width': 'none',
+        },
+        '.scrollbar-hide::-webkit-scrollbar': {
+          display: 'none', /* WebKit (Chrome, Safari) */
+        },
+      };
+      addUtilities(newUtilities, ['responsive']);
+    },
+  ],
 };

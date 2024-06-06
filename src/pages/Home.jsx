@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button.jsx";
 import TextBox from "../components/TextBox.jsx";
 import TextArea from "../components/TextArea.jsx";
+import Gallery from "../components/Gallery.jsx";
+import MapComponent from "../components/MapComponent.jsx";
 
 import colors from "../components/colors.json";
 
@@ -23,13 +25,14 @@ import {
 import casa_1 from "../assets/casa_1.jpeg";
 import casa_2 from "../assets/casa_2.jpeg";
 import casa_3 from "../assets/casa_3.jpeg";
+import elli from "../assets/ellisse_modificato_1.png";
 
 const images = [casa_1, casa_2, casa_3];
 
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col w-full min-h-screen overflow-x-hidden font-Bodoni">
+      <div className="flex flex-col overflow-hidden scrollbar-hide w-full min-h-screen scroll-smooth overflow-x-hidden font-Bodoni">
         <section className="overflow-x-hidden">
           {/*carosello immagini */}
           <div className="relative justify-center h-full overflow-x-hidden">
@@ -48,7 +51,8 @@ export default function Home() {
                   Benvenuti da <br /> Clature73
                 </h6>
                 <p className="absolute text-white top-[175px] font-[400] left-12 text-lg">
-                  Casa vacanza con calore, confort e <br />carattere
+                  Casa vacanza con calore, confort e <br />
+                  carattere
                 </p>
                 <Button
                   variant="outline"
@@ -87,7 +91,7 @@ export default function Home() {
         </section>
         <section className="">
           <div className="z-10 flex flex-col items-center px-6 py-2 text-left bg-grigio">
-            <h6 className="py-4 z-10 text-[27px] font-[500] font-Bodoni text-olive">
+            <h6 className="py-4 z-10 text-[27px] font-[600] font-Bodoni text-olive">
               Prenota il tuo soggiorno con me.
             </h6>
             {/* <div className="h-[0.1px] w-[70%] justify-center items-center bg-olive"></div> */}
@@ -129,12 +133,17 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="absolute z-0 -bottom-[500px] -left-[540px] w-[1500px] h-[700px] rounded-b-full bg-grigio overflow-hidden"></div>
+          {/* div ellisse */}
+          <img src={elli} alt="ellisse" className="rotate-180 w-[390px] h-[160px] absolute" />
         </section>
         <section className="overflow-x-hidden">
           <div className="flex flex-col px-6 text-olive bg-giallino">
-            <h5 className="text-[35px] font-[600] z-10 mt-[40px] leading-10">Qualcosa sulla mia dimora..</h5>
-            <h6 className="text-[25px] font-[500] mt-4">Il tuo comfort e la tua convenienza è la mia priorità</h6>
+            <h5 className="text-[35px] font-[600] z-10 mt-[100px] leading-10">
+              Qualcosa sulla mia dimora..
+            </h5>
+            <h6 className="text-[25px] font-[600] leading-6 mt-4">
+              Il tuo comfort e la tua convenienza è la mia priorità
+            </h6>
             <p className="mt-4 text-lg">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
               assumenda, enim harum fuga nihil quae aspernatur ut labore quam
@@ -144,18 +153,157 @@ export default function Home() {
               iste deleniti corrupti aut saepe. Laborum voluptatem quam saepe
               repudiandae dolor blanditiis ea officiis earum! Incidunt.
             </p>
-          </div> 
-          <div className="px-6 pb-4 bg-giallino">
-            <Button className="font-sans rounded-3xl font-[300] bg-trasparent ring-1 ring-olive hover:bg-grigio text-olive">Scopri di più</Button>
+          </div>
+          <div className="px-6 pt-4 pb-6 bg-giallino">
+            <Button className="font-sans rounded-3xl font-[300] bg-trasparent ring-1 ring-olive hover:bg-grigio text-olive">
+              Scopri di più
+            </Button>
+          </div>
+        </section>
+        <div className=" h-5 bg-olive/80 "></div>
+        <section>
+          <div className="flex flex-col text-center font-[500] bg-gialloPa w-full pt-8 pb-6">
+            <h5 className=" text-[30px]">Gallery</h5>
+            <h6 className=" text-lg">
+              A un passo dal mare e dalla movida nostra
+            </h6>
+            <div className="bg-gialloPa px-4">
+              <Gallery></Gallery>
+            </div>
+          </div>
+        </section>
+        <div className=" h-5 bg-olive/80 "></div>
+        <section className="">
+          <div className=" bg-giallino py-4 px-6">
+            <h6 className=" text-3xl mb-4 font-[600]">
+              Dove <br />
+              si trova...
+            </h6>
+            <div className=" gap-4 pb-4">
+              <p className=" font-sans font-[200] text-[16] mb-8">
+                Benvenuti nella nostra incantevole casa vacanze a Catania,
+                un'oasi di relax e divertimento a pochi passi dal mare e dal
+                centro storico. Situata in una posizione privilegiata, potrai
+                goderti la bellezza delle spiagge catanesi e l'atmosfera
+                vibrante del centro storico, ricco di storia e cultura. La casa
+                è ideale per chi desidera trascorrere una vacanza
+                indimenticabile, con tutti i comfort necessari per rendere il
+                soggiorno piacevole e rilassante.
+              </p>
+              <p className=" font-sans font-[200] text-[16] mb-8">
+                Dotata di spazi luminosi e accoglienti, offre un ambiente ideale
+                per famiglie, gruppi di amici o coppie. Dalle finestre potrai
+                ammirare lo splendido panorama del mare, mentre il centro
+                storico con le sue stradine pittoresche e i suoi monumenti
+                storici si trova a breve distanza, facilmente raggiungibile a
+                piedi.
+              </p>
+              <p className=" font-sans font-[200] text-[16] mb-8">
+                E quando cala il sole, la movida notturna di Catania prende
+                vita, offrendoti una vasta scelta di locali, ristoranti e bar
+                dove potrai assaporare la cucina locale e vivere la vera anima
+                della città. Non vediamo l'ora di darti il benvenuto nella
+                nostra casa vacanze e farti scoprire tutte le meraviglie di
+                Catania!
+              </p>
+            </div>
+            {/* <div className=" bg-olive h-[400px] text-white items-center flex justify-center">Maps</div> */}
+            <MapComponent></MapComponent>
+          </div>
+        </section>
+        <div className=" h-5 bg-olive/80 "></div>
+        <section>
+          <div className="flex flex-col p-4 font-sans bg-gialloPa">
+            <h6 className=" p-3 mb-2 text-3xl font-Bodoni font-[500] leading-6">
+              Cosa troverai <br /> vicino alla residenza:
+            </h6>
+            <div className=" bg-grigio p-3 ring-2 ring-olive shadow-xl mb-6">
+              <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
+              <div className=" flex justify-between">
+                <ol className=" ml-5 list-disc ">
+                  <li>Parco Madre Teresa di Calcutta</li>
+                  <li>Fontana dei Malavoglia</li>
+                  <li>Marsala, Selinunte E Segesta</li>
+                  <li>Villa Bellini</li>
+                  <li>Palazzo del Toscano</li>
+                  <li>Anfiteatro Romano di Catania</li>
+                  <li>Palazzo San Demetrio</li>
+                  <li>Piazza dell'Università</li>
+                  <li>Palazzo Biscari</li>
+                  <li>Piazza Duomo</li>
+                </ol>
+                <ol className=" mr-2">
+                  <li>2,8 km</li>
+                  <li>2,9 km</li>
+                  <li>3,3 km</li>
+                  <li>3,4 km</li>
+                  <li>3,7 km</li>
+                  <li>3,8 km</li>
+                  <li>4,0 km</li>
+                  <li>4,1 km</li>
+                  <li>4,2 km</li>
+                  <li>4,2 km</li>
+                </ol>
+              </div>
+            </div>
+            <div className=" flex flex-col p-4 ring-2 ring-olive shadow-xl bg-grigio">
+              <h6 className=" text-[20px]">Per la movida:</h6>
+              <div className=" flex justify-between">
+                <ol className=" ml-5 list-disc ">
+                  <li>Piazza Dante</li>
+                  <li>Teatro Romano Di Catania</li>
+                  <li>Casa Museo di Giovanno Verga</li>
+                  <li>Castello Ursino</li>
+                  <li>Porta Garibaldi</li>
+                  <li>A Putia Dell'Ostello </li>
+                </ol>
+                <ol className="">
+                  <li>4,3 km</li>
+                  <li>4,3 km</li>
+                  <li>4,4 km</li>
+                  <li>4,7 km</li>
+                  <li>5,0 km</li>
+                  <li>5,4 km</li>
+                </ol>
+              </div>
+            </div>
+            <p className=" py-6 font-sans font-[200] px-2 text-justify">
+              É queste sono solo alcune delle tappe più iconiche della città di
+              Catania, ma sentiti libero di chiedermi qualsiasi cosa su luoghi e
+              attrazioni che ti piacerebbe visitare!!
+            </p>
           </div>
         </section>
         <section>
-          <div className=" bg-gialloPa">
-            <h5>Gallery</h5>
-            <h6>A un passo dal mare e dalla movida nostra</h6>
-          </div>
-          <div className="grid ">
-            
+          <div className=" text-olive bg-giallino pb-28 p-6">
+            <h6 className=" text-[31px] font-[500] leading-8 mb-4">
+              Le opinioni dei <br />
+              nostri ospiti
+            </h6>
+            <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+              <p className=" font-sans text-[200] text-[16px] mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium, nobis rerum nostrum illo repellat ut officiis dicta
+                repellendus eum! Quam!
+              </p>
+              <h5 className=" text-[21px] mb-2 shadow-xl">L. Bianchi</h5>
+            </div>
+            <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+              <p className=" font-sans text-[200] text-[16px] mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium, nobis rerum nostrum illo repellat ut officiis dicta
+                repellendus eum! Quam!
+              </p>
+              <h5 className=" text-[21px] mb-2 shadow-xl">L. Rossi</h5>
+            </div>
+            <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+              <p className=" font-sans text-[200] text-[16px] mb-2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Accusantium, nobis rerum nostrum illo repellat ut officiis dicta
+                repellendus eum! Quam!
+              </p>
+              <h5 className=" text-[21px] mb-2 shadow-xl">L. Verdi</h5>
+            </div>
           </div>
         </section>
       </div>
