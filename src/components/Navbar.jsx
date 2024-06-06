@@ -22,25 +22,26 @@ const Navbar = () => {
   const { childObjects } = colors;
 
   return (
-    <nav className={`shadow-sm bg-[#FEFAF0] font-Bodoni`}>
+    <nav className={`shadow-sm bg-gialloPa font-Bodoni`}>
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-center py-4">
           <div className="hidden w-full pr-10 sm:block">
-            <div className="flex items-center justify-between max-w-7xl font-Bodoni">
+            <div className="flex items-center  sm:text-center sm:justify-center justify-between max-w-7xl font-Bodoni">
               <div>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    clsx(" uppercase font-bold text-[#403F2B] text-xl", {
+                    clsx("font-bold text-[#403F2B] text-xl", {
                       "": isActive,
                     })
                   }
                 >
                   Clatur73
                 </NavLink>
+                <p>Una piccola didascalia</p>
               </div>
               <div className="flex items-center justify-end gap-5 text-lg">
-                <NavLink
+                {/* <NavLink
                   to="/"
                   className={({ isActive }) =>
                     clsx(variants.base, {
@@ -49,37 +50,7 @@ const Navbar = () => {
                   }
                 >
                   Home
-                </NavLink>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    clsx(variants.base, {
-                      [variants.active]: isActive,
-                    })
-                  }
-                >
-                  About
-                </NavLink>
-                <NavLink
-                  to="/contact"
-                  className={({ isActive }) =>
-                    clsx(variants.base, {
-                      [variants.active]: isActive,
-                    })
-                  }
-                >
-                  Contact
-                </NavLink>
-                <NavLink
-                  to="/attrazioni"
-                  className={({ isActive }) =>
-                    clsx(variants.base, {
-                      [variants.active]: isActive,
-                    })
-                  }
-                >
-                  Attrazioni
-                </NavLink>
+                </NavLink> */}
               </div>
             </div>
           </div>

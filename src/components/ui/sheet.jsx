@@ -42,7 +42,7 @@ const sheetVariants = cva(
       side: "right",
     },
   }
-)
+);
 
 const SheetContent = React.forwardRef(({ side = "right", className, children, ...props }, ref) => (
   <SheetPortal>

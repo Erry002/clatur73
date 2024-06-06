@@ -3,7 +3,7 @@ import React from "react";
 function Gallery() {
   return (
     <div className=" bg-gialloPa">
-      <div class="my-6 grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-2 bg-gialloPa">
+      <div class="my-6 grid grid-cols-2 gap-4 sm:max-w-xl sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-2 bg-gialloPa">
         {/* <!-- Prima riga --> */}
         <div class="col-span-2 sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
           <img

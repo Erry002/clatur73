@@ -47,16 +47,15 @@ export default function Home() {
               className="w-full overflow-x-hidden"
             >
               <div className="absolute z-10 h-full w-full bg-[#00000060]">
-                <h6 className="absolute text-white text-4xl font-[500] top-[90px] left-12">
-                  Benvenuti da <br /> Clature73
+                <h6 className="absolute text-white text-4xl sm:text-[70px] w-[300px] sm:w-full font-[500] top-[90px] sm:top-[130px] left-12">
+                  Benvenuti da Clatur73
                 </h6>
-                <p className="absolute text-white top-[175px] font-[400] left-12 text-lg">
-                  Casa vacanza con calore, confort e <br />
-                  carattere
+                <p className="absolute text-white top-[190px] font-[400] left-12 text-lg sm:text-[24px]">
+                  Casa vacanza con calore, confort e carattere
                 </p>
                 <Button
                   variant="outline"
-                  className=" bg-transparent absolute font-sans font-[300] text-white z-10 top-[260px] left-12 rounded-3xl"
+                  className=" bg-transparent absolute font-sans font-[300] text-white z-10 top-[230px] left-[46px] rounded-3xl"
                 >
                   Chiedi disponibilità
                 </Button>
@@ -91,15 +90,15 @@ export default function Home() {
         </section>
         <section className="">
           <div className="z-10 flex flex-col items-center px-6 py-2 text-left bg-grigio">
-            <h6 className="py-4 z-10 text-[27px] font-[600] font-Bodoni text-olive">
+            <h6 className="py-6 z-10 text-[37px] font-[600] font-Bodoni text-olive">
               Prenota il tuo soggiorno con me.
             </h6>
             {/* <div className="h-[0.1px] w-[70%] justify-center items-center bg-olive"></div> */}
-            <div className="z-10 flex flex-col items-center w-full py-4 ring-2 ring-olive">
-              <h6 className="px-4 pb-4 text-justify">
+            <div className="z-10 flex flex-col items-center max-w-xl w-full pb-10 ring-2 ring-olive">
+              <h6 className="p-6 text-[20px] text-justify">
                 {" "}
-                Contattami persapere se sono disponibili delle camere per vivere
-                una vacanza da sogno.
+                Contattami per sapere se sono disponibili delle camere per
+                vivere una vacanza da sogno.
               </h6>
               <p className=" w-[230px] text-justify"></p>
               <div className=" w-[80%] mb-4">
@@ -133,31 +132,37 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          {/* div ellisse */}
-          <img src={elli} alt="ellisse" className="rotate-180 w-[390px] h-[160px] absolute" />
+          <img
+            src={elli}
+            alt="ellisse"
+            className="z-10 rotate-180 w-full h-[160px]"
+          />
         </section>
-        <section className="overflow-x-hidden">
-          <div className="flex flex-col px-6 text-olive bg-giallino">
-            <h5 className="text-[35px] font-[600] z-10 mt-[100px] leading-10">
-              Qualcosa sulla mia dimora..
-            </h5>
-            <h6 className="text-[25px] font-[600] leading-6 mt-4">
-              Il tuo comfort e la tua convenienza è la mia priorità
-            </h6>
-            <p className="mt-4 text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-              assumenda, enim harum fuga nihil quae aspernatur ut labore quam
-              unde vero necessitatibus natus molestiae praesentium vitae rem
-              dolor architecto officiis. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Aliquid, eaque incidunt cumque quo laudantium
-              iste deleniti corrupti aut saepe. Laborum voluptatem quam saepe
-              repudiandae dolor blanditiis ea officiis earum! Incidunt.
-            </p>
-          </div>
-          <div className="px-6 pt-4 pb-6 bg-giallino">
-            <Button className="font-sans rounded-3xl font-[300] bg-trasparent ring-1 ring-olive hover:bg-grigio text-olive">
-              Scopri di più
-            </Button>
+        <section className="">
+          <div className="flex flex-col sm:justify-center sm:items-center px-6 -mt-[160px] text-olive bg-giallino">
+            <div className=" max-w-4xl">
+              <h5 className="text-[35px] sm:text-[50px] font-[600] z-10 mt-[100px] leading-10">
+                Qualcosa sulla mia dimora..
+              </h5>
+              <h6 className="text-[25px] sm:text-[30px] font-[600] leading-6 sm:leading-8 mt-4 sm:mt-6">
+                Il tuo comfort e la tua convenienza è la mia priorità
+              </h6>
+              <p className="mt-4 text-lg sm:text-[20px]">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
+                assumenda, enim harum fuga nihil quae aspernatur ut labore quam
+                unde vero necessitatibus natus molestiae praesentium vitae rem
+                dolor architecto officiis. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Aliquid, eaque incidunt cumque quo
+                laudantium iste deleniti corrupti aut saepe. Laborum voluptatem
+                quam saepe repudiandae dolor blanditiis ea officiis earum!
+                Incidunt.
+              </p>
+              <div className="px-6 sm:px-0 pt-4 pb-6 bg-giallino">
+                <Button className="font-sans rounded-3xl font-[300] bg-trasparent ring-1 ring-olive hover:bg-grigio text-olive">
+                  Scopri di più
+                </Button>
+              </div>
+            </div>
           </div>
         </section>
         <div className=" h-5 bg-olive/80 "></div>
@@ -174,41 +179,44 @@ export default function Home() {
         </section>
         <div className=" h-5 bg-olive/80 "></div>
         <section className="">
-          <div className=" bg-giallino py-4 px-6">
-            <h6 className=" text-3xl mb-4 font-[600]">
-              Dove <br />
-              si trova...
-            </h6>
-            <div className=" gap-4 pb-4">
-              <p className=" font-sans font-[200] text-[16] mb-8">
-                Benvenuti nella nostra incantevole casa vacanze a Catania,
-                un'oasi di relax e divertimento a pochi passi dal mare e dal
-                centro storico. Situata in una posizione privilegiata, potrai
-                goderti la bellezza delle spiagge catanesi e l'atmosfera
-                vibrante del centro storico, ricco di storia e cultura. La casa
-                è ideale per chi desidera trascorrere una vacanza
-                indimenticabile, con tutti i comfort necessari per rendere il
-                soggiorno piacevole e rilassante.
-              </p>
-              <p className=" font-sans font-[200] text-[16] mb-8">
-                Dotata di spazi luminosi e accoglienti, offre un ambiente ideale
-                per famiglie, gruppi di amici o coppie. Dalle finestre potrai
-                ammirare lo splendido panorama del mare, mentre il centro
-                storico con le sue stradine pittoresche e i suoi monumenti
-                storici si trova a breve distanza, facilmente raggiungibile a
-                piedi.
-              </p>
-              <p className=" font-sans font-[200] text-[16] mb-8">
-                E quando cala il sole, la movida notturna di Catania prende
-                vita, offrendoti una vasta scelta di locali, ristoranti e bar
-                dove potrai assaporare la cucina locale e vivere la vera anima
-                della città. Non vediamo l'ora di darti il benvenuto nella
-                nostra casa vacanze e farti scoprire tutte le meraviglie di
-                Catania!
-              </p>
+          <div className=" sm:flex sm:justify-center bg-giallino py-4 px-6">
+            <div className=" sm:flex sm:flex-col sm:justify-center sm:items-center sm:max-w-4xl">
+              <h6 className=" text-3xl mb-4 sm:text-[40px] font-[600]">
+                Dove si trova...
+              </h6>
+              <div className=" gap-4 pb-4">
+                <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
+                  Benvenuti nella nostra incantevole casa vacanze a Catania,
+                  un'oasi di relax e divertimento a pochi passi dal mare e dal
+                  centro storico. Situata in una posizione privilegiata, potrai
+                  goderti la bellezza delle spiagge catanesi e l'atmosfera
+                  vibrante del centro storico, ricco di storia e cultura. La
+                  casa è ideale per chi desidera trascorrere una vacanza
+                  indimenticabile, con tutti i comfort necessari per rendere il
+                  soggiorno piacevole e rilassante.
+                </p>
+                <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
+                  Dotata di spazi luminosi e accoglienti, offre un ambiente
+                  ideale per famiglie, gruppi di amici o coppie. Dalle finestre
+                  potrai ammirare lo splendido panorama del mare, mentre il
+                  centro storico con le sue stradine pittoresche e i suoi
+                  monumenti storici si trova a breve distanza, facilmente
+                  raggiungibile a piedi.
+                </p>
+                <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
+                  E quando cala il sole, la movida notturna di Catania prende
+                  vita, offrendoti una vasta scelta di locali, ristoranti e bar
+                  dove potrai assaporare la cucina locale e vivere la vera anima
+                  della città. Non vediamo l'ora di darti il benvenuto nella
+                  nostra casa vacanze e farti scoprire tutte le meraviglie di
+                  Catania!
+                </p>
+              </div>
+              <div className=" bg-olive h-[400px] w-full text-white items-center flex justify-center">
+                Maps
+              </div>
+              {/* <MapComponent></MapComponent> */}
             </div>
-            {/* <div className=" bg-olive h-[400px] text-white items-center flex justify-center">Maps</div> */}
-            <MapComponent></MapComponent>
           </div>
         </section>
         <div className=" h-5 bg-olive/80 "></div>
@@ -274,8 +282,9 @@ export default function Home() {
             </p>
           </div>
         </section>
+        <div className=" h-5 bg-olive/80 "></div>
         <section>
-          <div className=" text-olive bg-giallino pb-28 p-6">
+          <div className=" text-olive bg-giallino pb-20 p-6">
             <h6 className=" text-[31px] font-[500] leading-8 mb-4">
               Le opinioni dei <br />
               nostri ospiti
