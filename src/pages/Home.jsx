@@ -221,61 +221,63 @@ export default function Home() {
         </section>
         <div className=" h-5 bg-olive/80 "></div>
         <section>
-          <div className="flex flex-col p-4 font-sans bg-gialloPa">
-            <h6 className=" p-3 mb-2 text-3xl font-Bodoni font-[500] leading-6">
-              Cosa troverai <br /> vicino alla residenza:
+          <div className="flex flex-col p-4 font-sans sm:justify-center sm:items-center bg-gialloPa ">
+            <h6 className=" p-3 mb-2 sm:mb-8 sm:mt-2 text-3xl sm:text-4xl font-Bodoni font-[500] w-[400px] sm:w-full sm:text-center leading-6">
+              Cosa troverai vicino alla residenza:
             </h6>
-            <div className=" bg-grigio p-3 ring-2 ring-olive shadow-xl mb-6">
-              <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
-              <div className=" flex justify-between">
-                <ol className=" ml-5 list-disc ">
-                  <li>Parco Madre Teresa di Calcutta</li>
-                  <li>Fontana dei Malavoglia</li>
-                  <li>Marsala, Selinunte E Segesta</li>
-                  <li>Villa Bellini</li>
-                  <li>Palazzo del Toscano</li>
-                  <li>Anfiteatro Romano di Catania</li>
-                  <li>Palazzo San Demetrio</li>
-                  <li>Piazza dell'Università</li>
-                  <li>Palazzo Biscari</li>
-                  <li>Piazza Duomo</li>
-                </ol>
-                <ol className=" mr-2">
-                  <li>2,8 km</li>
-                  <li>2,9 km</li>
-                  <li>3,3 km</li>
-                  <li>3,4 km</li>
-                  <li>3,7 km</li>
-                  <li>3,8 km</li>
-                  <li>4,0 km</li>
-                  <li>4,1 km</li>
-                  <li>4,2 km</li>
-                  <li>4,2 km</li>
-                </ol>
+            <div className=" sm:max-w-4xl sm:flex sm:justify-center sm:items-center sm:gap-10 sm:w-full  sm:mb-4">
+              <div className=" bg-grigio p-3 ring-2 ring-olive shadow-xl mb-6 sm:mb-0">
+                <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
+                <div className=" flex justify-between">
+                  <ol className=" ml-5 list-disc ">
+                    <li>Parco Madre Teresa di Calcutta</li>
+                    <li>Fontana dei Malavoglia</li>
+                    <li>Marsala, Selinunte E Segesta</li>
+                    <li>Villa Bellini</li>
+                    <li>Palazzo del Toscano</li>
+                    <li>Anfiteatro Romano di Catania</li>
+                    <li>Palazzo San Demetrio</li>
+                    <li>Piazza dell'Università</li>
+                    <li>Palazzo Biscari</li>
+                    <li>Piazza Duomo</li>
+                  </ol>
+                  <ol className=" mr-2">
+                    <li>2,8 km</li>
+                    <li>2,9 km</li>
+                    <li>3,3 km</li>
+                    <li>3,4 km</li>
+                    <li>3,7 km</li>
+                    <li>3,8 km</li>
+                    <li>4,0 km</li>
+                    <li>4,1 km</li>
+                    <li>4,2 km</li>
+                    <li>4,2 km</li>
+                  </ol>
+                </div>
+              </div>
+              <div className=" flex flex-col p-4 sm:ml-2 sm:h-full ring-2 ring-olive shadow-xl bg-grigio">
+                <h6 className=" text-[20px]">Per la movida:</h6>
+                <div className=" flex justify-between sm:h-[240px]">
+                  <ol className=" ml-5 list-disc ">
+                    <li>Piazza Dante</li>
+                    <li>Teatro Romano Di Catania</li>
+                    <li>Casa Museo di Giovanno Verga</li>
+                    <li>Castello Ursino</li>
+                    <li>Porta Garibaldi</li>
+                    <li>A Putia Dell'Ostello </li>
+                  </ol>
+                  <ol className="">
+                    <li>4,3 km</li>
+                    <li>4,3 km</li>
+                    <li>4,4 km</li>
+                    <li>4,7 km</li>
+                    <li>5,0 km</li>
+                    <li>5,4 km</li>
+                  </ol>
+                </div>
               </div>
             </div>
-            <div className=" flex flex-col p-4 ring-2 ring-olive shadow-xl bg-grigio">
-              <h6 className=" text-[20px]">Per la movida:</h6>
-              <div className=" flex justify-between">
-                <ol className=" ml-5 list-disc ">
-                  <li>Piazza Dante</li>
-                  <li>Teatro Romano Di Catania</li>
-                  <li>Casa Museo di Giovanno Verga</li>
-                  <li>Castello Ursino</li>
-                  <li>Porta Garibaldi</li>
-                  <li>A Putia Dell'Ostello </li>
-                </ol>
-                <ol className="">
-                  <li>4,3 km</li>
-                  <li>4,3 km</li>
-                  <li>4,4 km</li>
-                  <li>4,7 km</li>
-                  <li>5,0 km</li>
-                  <li>5,4 km</li>
-                </ol>
-              </div>
-            </div>
-            <p className=" py-6 font-sans font-[200] px-2 text-justify">
+            <p className=" py-6 font-sans sm:max-w-4xl sm:text-xl font-[200] px-2 text-justify">
               É queste sono solo alcune delle tappe più iconiche della città di
               Catania, ma sentiti libero di chiedermi qualsiasi cosa su luoghi e
               attrazioni che ti piacerebbe visitare!!
@@ -285,33 +287,34 @@ export default function Home() {
         <div className=" h-5 bg-olive/80 "></div>
         <section>
           <div className=" text-olive bg-giallino pb-20 p-6">
-            <h6 className=" text-[31px] font-[500] leading-8 mb-4">
-              Le opinioni dei <br />
-              nostri ospiti
+            <h6 className=" text-[31px] w-[250px] sm:w-full sm:text-4xl font-[500] leading-8 mb-4">
+              Le opinioni dei nostri ospiti:
             </h6>
-            <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
-              <p className=" font-sans text-[200] text-[16px] mb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium, nobis rerum nostrum illo repellat ut officiis dicta
-                repellendus eum! Quam!
-              </p>
-              <h5 className=" text-[21px] mb-2 shadow-xl">L. Bianchi</h5>
-            </div>
-            <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
-              <p className=" font-sans text-[200] text-[16px] mb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium, nobis rerum nostrum illo repellat ut officiis dicta
-                repellendus eum! Quam!
-              </p>
-              <h5 className=" text-[21px] mb-2 shadow-xl">L. Rossi</h5>
-            </div>
-            <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
-              <p className=" font-sans text-[200] text-[16px] mb-2">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusantium, nobis rerum nostrum illo repellat ut officiis dicta
-                repellendus eum! Quam!
-              </p>
-              <h5 className=" text-[21px] mb-2 shadow-xl">L. Verdi</h5>
+            <div className=" sm:flex sm:gap-8 sm:max-w-4xl sm:justify-center sm:items-center">
+              <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+                <p className=" font-sans text-[200] text-[16px] mb-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, nobis rerum nostrum illo repellat ut officiis
+                  dicta repellendus eum! Quam!
+                </p>
+                <h5 className=" text-[21px] mb-2 shadow-xl">L. Bianchi</h5>
+              </div>
+              <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+                <p className=" font-sans text-[200] text-[16px] mb-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, nobis rerum nostrum illo repellat ut officiis
+                  dicta repellendus eum! Quam!
+                </p>
+                <h5 className=" text-[21px] mb-2 shadow-xl">L. Rossi</h5>
+              </div>
+              <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+                <p className=" font-sans text-[200] text-[16px] mb-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Accusantium, nobis rerum nostrum illo repellat ut officiis
+                  dicta repellendus eum! Quam!
+                </p>
+                <h5 className=" text-[21px] mb-2 shadow-xl">L. Verdi</h5>
+              </div>
             </div>
           </div>
         </section>
