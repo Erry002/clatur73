@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col overflow-hidden scrollbar-hide w-full min-h-screen scroll-smooth overflow-x-hidden font-Bodoni">
-        <section className="overflow-x-hidden">
+        <section className="overflow-x-hidden" id="home">
           {/*carosello immagini */}
           <div className="relative justify-center h-full overflow-x-hidden">
             <Carousel
@@ -47,7 +47,7 @@ export default function Home() {
               className="w-full overflow-x-hidden"
             >
               <div className="absolute z-10 h-full w-full bg-[#00000060]">
-                <h6 className="absolute text-white text-4xl sm:text-[70px] w-[300px] sm:w-full font-[500] top-[90px] sm:top-[130px] left-12">
+                <h6 className="absolute text-white text-4xl sm:text-[72px] w-[300px] sm:w-full font-[500] top-[90px] sm:top-[130px] left-12">
                   Benvenuti da Clatur73
                 </h6>
                 <p className="absolute text-white top-[190px] font-[400] left-12 text-lg sm:text-[24px]">
@@ -66,7 +66,7 @@ export default function Home() {
                     <div className="">
                       <Card>
                         <CardContent
-                          className={`flex w-full h-[500px] ${colors.mainObjects} items-center justify-center`}
+                        className={`flex w-full h-[500px] sm:h-[900px]  items-center justify-center`}
                         >
                           <img
                             src={image}
@@ -88,9 +88,9 @@ export default function Home() {
             </Carousel>
           </div>
         </section>
-        <section className="">
+        <section className="" id="prenota">
           <div className="z-10 flex flex-col items-center px-6 py-2 text-left bg-grigio">
-            <h6 className="py-6 z-10 text-[37px] font-[600] font-Bodoni text-olive">
+            <h6 className="py-6 z-10 text-[37px] sm:text-[50px] font-[600] font-Bodoni text-olive">
               Prenota il tuo soggiorno con me.
             </h6>
             {/* <div className="h-[0.1px] w-[70%] justify-center items-center bg-olive"></div> */}
@@ -138,7 +138,7 @@ export default function Home() {
             className="z-10 rotate-180 w-full h-[160px]"
           />
         </section>
-        <section className="">
+        <section className="" id="about">
           <div className="flex flex-col sm:justify-center sm:items-center px-6 -mt-[160px] text-olive bg-giallino">
             <div className=" max-w-4xl">
               <h5 className="text-[35px] sm:text-[50px] font-[600] z-10 mt-[100px] leading-10">
@@ -166,10 +166,10 @@ export default function Home() {
           </div>
         </section>
         <div className=" h-5 bg-olive/80 "></div>
-        <section>
+        <section id="gallery">
           <div className="flex flex-col text-center font-[500] bg-gialloPa w-full pt-8 pb-6">
-            <h5 className=" text-[30px]">Gallery</h5>
-            <h6 className=" text-lg">
+            <h5 className=" text-[30px] sm:text-[50px]">Galleria Foto</h5>
+            <h6 className=" text-lg sm:text-[22px]">
               A un passo dal mare e dalla movida nostra
             </h6>
             <div className="bg-gialloPa px-4">
@@ -178,10 +178,10 @@ export default function Home() {
           </div>
         </section>
         <div className=" h-5 bg-olive/80 "></div>
-        <section className="">
+        <section className="" id="mappa">
           <div className=" sm:flex sm:justify-center bg-giallino py-4 px-6">
             <div className=" sm:flex sm:flex-col sm:justify-center sm:items-center sm:max-w-4xl">
-              <h6 className=" text-3xl mb-4 sm:text-[40px] font-[600]">
+              <h6 className=" text-3xl mb-4 sm:text-[50px] font-[600]">
                 Dove si trova...
               </h6>
               <div className=" gap-4 pb-4">
@@ -222,7 +222,7 @@ export default function Home() {
         <div className=" h-5 bg-olive/80 "></div>
         <section>
           <div className="flex flex-col p-4 font-sans sm:justify-center sm:items-center bg-gialloPa ">
-            <h6 className=" p-3 mb-2 sm:mb-8 sm:mt-2 text-3xl sm:text-4xl font-Bodoni font-[500] w-[400px] sm:w-full sm:text-center leading-6">
+            <h6 className=" p-3 mb-2 sm:mb-8 sm:mt-2 text-3xl sm:text-[50px] font-Bodoni font-[500] w-[400px] sm:w-full sm:text-center leading-6">
               Cosa troverai vicino alla residenza:
             </h6>
             <div className=" sm:max-w-4xl sm:flex sm:justify-center sm:items-center sm:gap-10 sm:w-full  sm:mb-4">
@@ -277,7 +277,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <p className=" py-6 font-sans sm:max-w-4xl sm:text-xl font-[200] px-2 text-justify">
+            <p className=" pt-6 font-sans sm:max-w-4xl sm:text-xl font-[200] px-2 text-justify">
               É queste sono solo alcune delle tappe più iconiche della città di
               Catania, ma sentiti libero di chiedermi qualsiasi cosa su luoghi e
               attrazioni che ti piacerebbe visitare!!
@@ -286,11 +286,11 @@ export default function Home() {
         </section>
         <div className=" h-5 bg-olive/80 "></div>
         <section>
-          <div className=" text-olive bg-giallino pb-20 p-6">
-            <h6 className=" text-[31px] w-[250px] sm:w-full sm:text-4xl font-[500] leading-8 mb-4">
+          <div className=" sm:flex sm:flex-col sm:justify-center sm:items-center text-olive bg-giallino pb-32 p-6">
+            <h6 className=" text-[31px] w-[250px] sm:text-center sm:w-full sm:text-[50px] font-[500] leading-8 mb-4 sm:mb-14 sm:mt-6">
               Le opinioni dei nostri ospiti:
             </h6>
-            <div className=" sm:flex sm:gap-8 sm:max-w-4xl sm:justify-center sm:items-center">
+            <div className="sm:flex sm:justify-center sm:items-center sm:gap-8 sm:max-w-4xl ">
               <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

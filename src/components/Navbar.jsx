@@ -1,7 +1,8 @@
 import { NavLink } from "react-router-dom";
+import { Link } from "react-scroll";
 import clsx from "clsx";
 import React from "react";
-import { FiMenu } from 'react-icons/fi';
+import { FiMenu } from "react-icons/fi";
 import colors from "../components/colors.json";
 
 import {
@@ -11,7 +12,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet"
+} from "@/components/ui/sheet";
 
 const variants = {
   base: "text-gray-700 hover:text-black",
@@ -22,16 +23,16 @@ const Navbar = () => {
   const { childObjects } = colors;
 
   return (
-    <nav className={`shadow-sm bg-gialloPa font-Bodoni`}>
+    <nav className="shadow-xl sticky top-0 z-50 bg-gialloPa font-Bodoni min-h-full">
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-center py-4">
-          <div className="hidden w-full pr-10 sm:block">
-            <div className="flex items-center  sm:text-center sm:justify-center justify-between max-w-7xl font-Bodoni">
+          <div className="hidden w-full max-w-4xl pr-10 sm:flex sm:justify-center sm:items-center">
+            <div className="flex flex-col items-center sm:text-center sm:justify-center justify-between font-Bodoni">
               <div>
                 <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    clsx("font-bold text-[#403F2B] text-xl", {
+                    clsx("font-bold text-olive text-xl", {
                       "": isActive,
                     })
                   }
@@ -39,18 +40,64 @@ const Navbar = () => {
                   Clatur73
                 </NavLink>
                 <p>Una piccola didascalia</p>
+                <div className="hidden sm:block sm:h-0 sm:z-50 sm:relative sm:w-full">
+                  <div className="bg-giallino h-14 container w-[100vh] shadow-xl flex justify-center items-center">
+                    <div>
+                      <Link
+                        to="home"
+                        smooth={true}
+                        duration={500}
+                        className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
+                      >
+                        Home
+                      </Link>
+                      <Link
+                        to="prenota"
+                        smooth={true}
+                        duration={500}
+                        className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
+                      >
+                        Prenota
+                      </Link>
+                      <Link
+                        to="about"
+                        smooth={true}
+                        duration={500}
+                        className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
+                      >
+                        About
+                      </Link>
+                      <Link
+                        to="gallery"
+                        smooth={true}
+                        duration={500}
+                        className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
+                      >
+                        Galleria
+                      </Link>
+                      <Link
+                        to="mappa"
+                        smooth={true}
+                        duration={500}
+                        className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
+                      >
+                        Mappa
+                      </Link>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div className="flex items-center justify-end gap-5 text-lg">
                 {/* <NavLink
                   to="/"
                   className={({ isActive }) =>
-                    clsx(variants.base, {
-                      [variants.active]: isActive,
-                    })
-                  }
+                  clsx(variants.base, {
+                    [variants.active]: isActive,
+                  })
+                }
                 >
-                  Home
-                </NavLink> */}
+                Home
+              </NavLink> */}
               </div>
             </div>
           </div>
@@ -75,49 +122,51 @@ const Navbar = () => {
                   </SheetTrigger>
                   <SheetContent>
                     <SheetHeader>
-                      <SheetTitle className="mb-4 text-3xl font-bold text-center font-Bodoni">Menu</SheetTitle>
+                      <SheetTitle className="mb-4 text-3xl font-bold text-center font-Bodoni">
+                        Menu
+                      </SheetTitle>
                       <SheetDescription>
                         <div className="flex flex-col items-center gap-4 text-lg font-Bodoni">
-                          <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                              clsx(variants.base, {
-                                [variants.active]: isActive,
-                              })
-                            }
+                          <Link
+                            to="home"
+                            smooth={true}
+                            duration={500}
+                            className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
                           >
                             Home
-                          </NavLink>
-                          <NavLink
-                            to="/about"
-                            className={({ isActive }) =>
-                              clsx(variants.base, {
-                                [variants.active]: isActive,
-                              })
-                            }
+                          </Link>
+                          <Link
+                            to="prenota"
+                            smooth={true}
+                            duration={500}
+                            className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
+                          >
+                            Prenota
+                          </Link>
+                          <Link
+                            to="about"
+                            smooth={true}
+                            duration={500}
+                            className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
                           >
                             About
-                          </NavLink>
-                          <NavLink
-                            to="/contact"
-                            className={({ isActive }) =>
-                              clsx(variants.base, {
-                                [variants.active]: isActive,
-                              })
-                            }
+                          </Link>
+                          <Link
+                            to="gallery"
+                            smooth={true}
+                            duration={500}
+                            className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
                           >
-                            Contact
-                          </NavLink>
-                          <NavLink
-                            to="/attrazioni"
-                            className={({ isActive }) =>
-                              clsx(variants.base, {
-                                [variants.active]: isActive,
-                              })
-                            }
+                            Galleria
+                          </Link>
+                          <Link
+                            to="mappa"
+                            smooth={true}
+                            duration={500}
+                            className="text-olive px-4 hover:text-olive/50 cursor-pointer hover:underline underline-offset-4"
                           >
-                            Attrazioni
-                          </NavLink>
+                            Mappa
+                          </Link>
                         </div>
                       </SheetDescription>
                     </SheetHeader>
