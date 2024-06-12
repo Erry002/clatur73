@@ -24,9 +24,9 @@ module.exports = {
       },
 
       colors: {
-        olive: "#403F2B",
-        grigio: "#DDDDCC",
-        giallino: "#F3F1C4",
+        olive: "#000000",
+        grigio: "#FFF3F1", //sfondo principale
+        giallino: "#E0BE9A", //sfondo secondario
         gialloSc: "#BFBF7E",
         gialloPa: "#FEFAF0",
         border: "hsl(var(--border))",

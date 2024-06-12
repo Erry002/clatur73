@@ -1,74 +1,98 @@
 import React from "react";
+import images from "./ui/images.js"; // Assicurati che il percorso sia corretto
 
 function Gallery() {
   return (
-    <div className="bg-gialloPa">
-      <div className="my-6 grid grid-cols-2 gap-4 md:max-w-4xl md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 bg-gialloPa">
-        {/* Prima riga */}
-        <div className="col-span-2 md:col-span-1">
+    <>
+      <div className="grid gap-4 grid-cols-2 max-w-4xl px-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 ">
+        <div className="grid">
           <img
-            src="https://picsum.photos/400/200"
+            src={images.casa_1}
             alt="Immagine 1"
-            className="ring-2 ring-olive"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        {/* Seconda riga */}
-        <div className="col-span-1 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/270/200"
+            src={images.casa_2}
             alt="Immagine 2"
-            className="ring-2 ring-olive"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        <div className="col-span-1 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/200/145"
+            src={images.casa_3}
             alt="Immagine 3"
-            className="ring-2 ring-olive"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        {/* Terza riga */}
-        <div className="col-span-2 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/400/200"
+            src={images.casa_4}
             alt="Immagine 4"
-            className="ring-2 ring-olive"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        {/* Quarta riga */}
-        <div className="col-span-1 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/400/500"
+            src={images.casa_5}
             alt="Immagine 5"
-            className="ring-2 ring-olive"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        {/* Quinta riga */}
-        <div className="col-span-1 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/170/200"
+            src={images.casa_6}
             alt="Immagine 6"
-            className="w-[160px] ring-2 ring-olive h-[200px]"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        <div className="col-span-1 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/200/200"
+            src={images.casa_7}
             alt="Immagine 7"
-            className="h-[200px] ring-2 ring-olive"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
-        {/* Sesta riga */}
-        <div className="col-span-2 md:col-span-1">
+        <div className="grid">
           <img
-            src="https://picsum.photos/400/200"
-            alt="Immagine 8"
-            className="ring-2 ring-olive"
+            src={images.casa_16}
+            alt="Immagine 16"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
+          />
+        </div>
+        <div className="grid">
+          <img
+            src={images.casa_9}
+            alt="Immagine 9"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
+          />
+        </div>
+        <div className="grid">
+          <img
+            src={images.casa_10}
+            alt="Immagine 10"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
+          />
+        </div>
+        <div className="grid">
+          <img
+            src={images.casa_20}
+            alt="Immagine 20"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
+          />
+        </div>
+        <div className="grid">
+          <img
+            src={images.casa_12}
+            alt="Immagine 12"
+            className="ring-2 rounded ring-olive hover:scale-150 transition-all"
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
+
 
 export default Gallery;

@@ -9,7 +9,7 @@ const TextBox = ({ value, onChange, placeholder, title, stile }) => (
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className="rounded-xl bg-gialloPa ring-2 ring-olive w-full h-[40px] pl-4 text-slate-900 outline-none mb-2"
+      className="rounded-xl bg-grigio ring-2 ring-olive w-full h-[40px] pl-4 text-slate-900 outline-none mb-2"
     />
   </div>
 );

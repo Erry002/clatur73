@@ -23,7 +23,7 @@ const Navbar = () => {
   const { childObjects } = colors;
 
   return (
-    <nav className="shadow-xl sticky top-0 z-50 bg-gialloPa font-Bodoni min-h-full">
+    <nav className="shadow-xl sticky top-0 z-50 mb-0 bg-grigio font-Bodoni">
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-center py-4">
           <div className="hidden w-full max-w-4xl pr-10 sm:flex sm:justify-center sm:items-center">
