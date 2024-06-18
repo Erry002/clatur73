@@ -144,19 +144,21 @@ export default function Home() {
                 <h6 className="absolute text-white text-4xl sm:text-[72px] w-[300px] sm:w-full font-[500] sm:leading-[70px] top-[150px] sm:top-[330px] left-12">
                   Benvenuti da Clatur73
                 </h6>
-                <p className="absolute text-white top-[240px] sm:top-[480px] md:top-[420px] xl:top-[420px] font-[400] left-12 text-lg sm:text-[24px]">
+                <p className="absolute text-white top-[240px] sm:top-[480px] md:top-[420px] xl:top-[420px] font-[400] left-14 text-lg sm:text-[24px]">
                   Casa vacanza con calore, confort e carattere
                 </p>
-                <div className="absolute bottom-24 left-16 text-white text-xl">
+                <div className="absolute bottom-24 left-12 sm:bottom-20 text-white text-xl">
                   <p>Camere a partire da: 50€</p>
                 </div>
-                <div className="absolute bottom-24 right-16 text-white text-xl ">
+                <div className="absolute bottom-16 left-12 sm:right-12 sm:left-auto sm:bottom-20 text-white text-xl ">
                   <h6 className=" ">Valutazione da Booking</h6>
                   <div className="absolute">
                     <div className=" flex">
-                      <Star />
-                      <Star />
-                      <Star />
+                      <Star className=" fill-giallino stroke-giallino/90" />
+                      <Star className=" fill-giallino stroke-giallino/90" />
+                      <Star className=" fill-giallino stroke-giallino/90" />
+                      <Star className=" stroke-giallino/90" />
+                      <Star className=" stroke-giallino/90" />
                     </div>
                   </div>
                 </div>
@@ -207,8 +209,8 @@ export default function Home() {
                     onSelect={handleDateSelect}
                     className="rounded-2xl ring-olive ring-1 bg-olive/20 items-center justify-center flex sm:w-[500px]"
                   />
-                  <div className=" flex bg-grigio text-center justify-center mt-4 ring-1 rounded-2xl text-olive ring-olive gap-32 font-sans">
-                    <p>
+                  <div className=" flex bg-grigio text-center justify-center mt-4 ring-2 rounded-2xl text-olive ring-olive gap-32 font-sans">
+                    <p className=" ">
                       Check-in:
                       <br />
                       {selectedDates?.from
@@ -260,7 +262,7 @@ export default function Home() {
                   isChecked={isChecked}
                   value={isChecked}
                   onChange={(e) => setIsChecked(e.target.value)}
-                  label="Accetto termini e condizioni"
+                  label="Accetto termini e condizioni delle Privacy e Cookie Policy"
                 />
                 <Button
                   type="submit"
@@ -280,11 +282,11 @@ export default function Home() {
 
         <section className="" id="about">
           <div className="flex flex-col sm:justify-center sm:items-center -mt-[160px] text-olive bg-grigio">
-            <div className=" max-w-4xl ">
+            <div className=" px-6 max-w-4xl ">
               <h5 className="text-[35px] sm:text-center sm:text-[50px] font-[800] z-10 mt-[100px] leading-10">
                 Qualcosa sulla mia dimora..
               </h5>
-              <h6 className="text-[25px] sm:text-[30px]  sm:text-center font-[600] leading-6 sm:leading-8 mt-4 sm:mt-6">
+              <h6 className="text-[25px] sm:text-[30px] sm:text-center font-[600] leading-6 sm:leading-8 mt-4 sm:mt-6">
                 Il tuo comfort e la tua convenienza è la mia priorità
               </h6>
               <p className="my-4 text-lg font-sans font-[200] sm:text-[20px]">
@@ -303,11 +305,11 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className=" h-5 bg-olive/80 "></div>
+        {/* <div className=" h-5 bg-olive/80 "></div> */}
         <section id="gallery">
           <div className="flex justify-center items-center text-center font-[500] bg-grigio w-full pt-8 pb-6">
             <div className=" flex flex-col justify-center items-center max-w-4xl">
-              <h5 className=" text-[30px] font-[800] sm:text-[50px]">
+              <h5 className=" text-[25px] font-[600] sm:text-[50px]">
                 Galleria Foto
               </h5>
               <h6 className=" text-lg font-sans font-[200] pb-6 w-72 sm:w-full sm:text-[22px]">
@@ -592,30 +594,55 @@ export default function Home() {
               Le opinioni dei nostri ospiti:
             </h6>
             <div className="sm:flex sm:justify-center sm:items-center sm:gap-8 sm:max-w-4xl ">
-              <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+              <div className=" ring-2 ring-olive p-2 mb-4 shadow-2xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, nobis rerum nostrum illo repellat ut officiis
                   dicta repellendus eum! Quam!
                 </p>
-                <h5 className=" text-[21px] mb-2 shadow-xl">L. Bianchi</h5>
+                <div className=" border w-full my-2 border-black"></div>
+                <div className=" flex text-xl justify-between mb-1">
+                  <h5 className=" ">L. Bianchi</h5>
+                  <div className="flex">
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                  </div>
+                </div>
               </div>
-              <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+              <div className=" ring-2 ring-olive p-2 mb-4 shadow-2xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, nobis rerum nostrum illo repellat ut officiis
                   dicta repellendus eum! Quam!
                 </p>
-                <h5 className=" text-[21px] mb-2 shadow-xl">L. Rossi</h5>
+                <div className=" border w-full my-2 border-black"></div>
+                <div className=" flex text-xl justify-between mb-1">
+                  <h5 className=" ">L.Verdi </h5>
+                  <div className="flex">
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                  </div>
+                </div>
               </div>
-              <div className=" ring-2 ring-olive p-2 mb-4 shadow-xl">
+              <div className=" ring-2 ring-olive p-2 mb-4 shadow-2xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, nobis rerum nostrum illo repellat ut officiis
                   dicta repellendus eum! Quam!
                 </p>
-                <h5 className=" text-[21px] mb-2 shadow-xl">L. Verdi</h5>
+                <div className=" border w-full my-2 border-black"></div>
+                <div className=" flex text-xl justify-between mb-1">
+                  <h5 className=" ">L.Rossi</h5>
+                  <div className="flex">
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                  </div>
+                </div>
               </div>
+              
             </div>
           </div>
         </section>
@@ -628,8 +655,9 @@ export default function Home() {
   /*
   cosa da aggiungere
   -prezzo e valutazione booking in home page  V
+  - aggiunta descrizione confort casa O
   -carosello attrazioni + descrizione 
   -aggiunta ristoranti
-  -rivalutare recensioni clienti (dissolvenza con possibilità di vederle tutte al click)
+  -rivalutare recensioni clienti (dissolvenza con possibilità di vederle tutte al click) stile AppStore
 */
 }
