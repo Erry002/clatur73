@@ -29,16 +29,14 @@ const Navbar = () => {
           <div className="hidden w-full max-w-4xl pr-10 sm:flex sm:justify-center sm:items-center">
             <div className="flex flex-col items-center sm:text-center sm:justify-center justify-between font-Bodoni">
               <div>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    clsx("font-bold text-olive text-xl", {
-                      "": isActive,
-                    })
-                  }
+                <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  className=" font-extrabold text-xl text-olive cursor-pointer"
                 >
                   Clatur73
-                </NavLink>
+                </Link>
                 <p>Una piccola didascalia</p>
                 <div className="hidden sm:block sm:h-0 sm:z-50 sm:relative sm:w-full">
                   <div className="bg-giallino h-14 container w-[100vh] shadow-xl flex justify-center items-center">
@@ -104,16 +102,14 @@ const Navbar = () => {
           <div className="block w-full sm:hidden">
             <div className="flex items-center justify-between max-w-7xl font-Bodoni">
               <div>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    clsx(" font-bold text-xl font-Bodoni", {
-                      "": isActive,
-                    })
-                  }
+              <Link
+                  to="home"
+                  smooth={true}
+                  duration={500}
+                  className=" font-extrabold text-xl text-olive cursor-pointer"
                 >
-                  Clatur 73
-                </NavLink>
+                  Clatur73
+                </Link>
               </div>
               <div className="flex items-center justify-end ">
                 <Sheet>

@@ -3,14 +3,14 @@ import React from "react";
 
 const Checkbox = ({ isChecked, onChange, title,label }) => {
   return (
-    <div className=" flex justify-center items-center my-2">
+    <div className=" flex justify-center items-center">
       <input
         required
         type="checkbox"
         checked={isChecked}
         onChange={onChange}
         title={title}
-        className="h-5 w-5 accent-olive/90"
+        className="h-5 w-5 shadow-lg accent-olive/90"
       />
       <label className="ml-2">{label} <span className=" text-olive">*</span></label>
     </div>

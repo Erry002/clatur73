@@ -21,7 +21,7 @@ import casa_20 from "../../assets/foto_casa_carmelo/casa_20.jpeg";
 
 // aggiungi tutte le altre immagini qui
 
-const images = {
+const images = [
   casa_1,
   casa_2,
   casa_3,
@@ -37,13 +37,12 @@ const images = {
   casa_13,
   casa_14,
   casa_15,
-  casa_15,
   casa_16,
   casa_17,
   casa_18,
   casa_19,
   casa_20,
   // aggiungi tutte le altre immagini qui
-};
+];
 
 export default images;

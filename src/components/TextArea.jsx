@@ -9,7 +9,7 @@ const TextArea = ({ value, onChange, placeholder, cols, title, rows }) => (
       value={value}
       onChange={onChange}
       placeholder={placeholder}
-      className="rounded-xl bg-grigio ring-2 ring-olive w-full h-[100px] py-2 px-4 text-slate-900 outline-none mb-2"
+      className="rounded-xl shadow-lg bg-grigio ring-2 ring-olive w-full h-[100px] py-2 px-4 text-slate-900 outline-none mb-0"
     ></textarea>
   </div>
 );

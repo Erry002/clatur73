@@ -13,11 +13,6 @@ import Gallery from "../components/Gallery.jsx";
 import MapComponent from "../components/MapComponent.jsx";
 import colors from "../components/colors.json";
 
-import { FaWifi } from "react-icons/fa6";
-import { MdLocalParking } from "react-icons/md";
-import { FaBed } from "react-icons/fa";
-import { RiCustomerService2Fill } from "react-icons/ri";
-
 import {
   Carousel,
   CarouselContent,
@@ -25,17 +20,18 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-//3, 19, 15,
+
 import casa_1 from "../assets/casa_1.jpeg";
 import casa_2 from "../assets/casa_2.jpeg";
 import casa_3 from "../assets/casa_3.jpeg";
 import elli from "../assets/ellisse_modificato_1.png";
 import elli2 from "../assets/ellisse_modificato_2.png";
+import { Star } from "lucide-react";
 
 const images = [casa_1, casa_2, casa_3];
 
 export default function Home() {
-  const [selectedDates, setSelectedDates] = useState([]);
+  const [selectedDates, setSelectedDates] = useState({ from: null, to: null });
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -50,7 +46,7 @@ export default function Home() {
     setSelectedDates(dates);
   };
 
-  console.log("Date selezionate: ", selectedDates);
+  // console.log("Date selezionate: ", selectedDates);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -62,8 +58,8 @@ export default function Home() {
       !cellulare ||
       !message ||
       !isChecked ||
-      !selectedDates ||
-      selectedDates.length === 0 // Assicurati che siano state selezionate date
+      !selectedDates.from ||
+      !selectedDates.to
     ) {
       alert(
         "Per favore compila tutti i campi e accetta i termini e condizioni."
@@ -71,27 +67,26 @@ export default function Home() {
       return;
     }
 
-    // Estrai le date "from" e "to" dall'array delle date selezionate
-    const fromDate = selectedDates.from + 0; // Utilizza l'operatore di opzionalità opzionale per evitare errori se l'array è vuoto
-    const toDate = selectedDates.to + 0; // Utilizza l'operatore di opzionalità opzionale per evitare errori se l'array è vuoto
+    const fromDate = selectedDates?.from + 0;
+    const toDate = selectedDates?.to + 0;
 
-    // // Verifica che le date siano valide
-    // if (!fromDate || !toDate) {
-    //   alert("Seleziona una data di inizio e una data di fine valide.");
-    //   return;
-    // }
+    // Verifica che le date siano valide
+    if (!fromDate || !toDate) {
+      alert("Seleziona una data di inizio e una data di fine valide.");
+      return;
+    }
 
-    // // Verifica che le date siano oggetti Date validi
+    // Verifica che le date siano oggetti Date validi
     // if (!(fromDate instanceof Date) || !(toDate instanceof Date)) {
     //   alert("Le date selezionate non sono valide.");
     //   return;
     // }
 
-    console.log("fromDate:", fromDate);
-    console.log("toDate:", toDate);
+    // console.log("fromDate:", fromDate);
+    // console.log("toDate:", toDate);
 
-    console.log("Delle cose: ", selectedDates.from)
-    console.log("Delle cose: ", selectedDates.to)
+    // console.log("Delle cose: ", selectedDates.from);
+    // console.log("Delle cose: ", selectedDates.to);
 
     const serviceId = "service_hozzjlm";
     const templateId = "template_u42rl68";
@@ -106,6 +101,16 @@ export default function Home() {
       cellulare,
       isChecked,
     };
+
+    // const templateParams = {
+    //   fromDate: fromDate.toLocaleDateString(), // Se emailjs richiede una stringa
+    //   toDate: toDate.toLocaleDateString(), // Se emailjs richiede una stringa
+    //   name,
+    //   email,
+    //   message,
+    //   cellulare,
+    //   isChecked,
+    // };
 
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
       (response) => {
@@ -142,12 +147,19 @@ export default function Home() {
                 <p className="absolute text-white top-[240px] sm:top-[480px] md:top-[420px] xl:top-[420px] font-[400] left-12 text-lg sm:text-[24px]">
                   Casa vacanza con calore, confort e carattere
                 </p>
-                {/* <Button
-                  variant="outline"
-                  className=" bg-transparent absolute font-sans font-[300] text-white z-10 top-[240px] sm:top-[330px] md:top-[280px] left-[46px] rounded-3xl"
-                >
-                  Chiedi disponibilità
-                </Button> */}
+                <div className="absolute bottom-24 left-16 text-white text-xl">
+                  <p>Camere a partire da: 50€</p>
+                </div>
+                <div className="absolute bottom-24 right-16 text-white text-xl ">
+                  <h6 className=" ">Valutazione da Booking</h6>
+                  <div className="absolute">
+                    <div className=" flex">
+                      <Star />
+                      <Star />
+                      <Star />
+                    </div>
+                  </div>
+                </div>
               </div>
               <CarouselContent className="">
                 {images.map((image, index) => (
@@ -178,7 +190,7 @@ export default function Home() {
           </div>
         </section>
         <section className="" id="prenota">
-          <div className="z-10 flex flex-col items-center px-6 py-2 text-left bg-giallino">
+          <div className="z-10 flex flex-col items-center px-3 py-2 text-left bg-giallino">
             <h6 className="py-6 z-10 text-[37px] sm:text-[50px] font-[800] font-Bodoni text-olive">
               Prenota il tuo soggiorno con me.
             </h6>
@@ -193,23 +205,27 @@ export default function Home() {
                     mode="range"
                     selected={selectedDates}
                     onSelect={handleDateSelect}
-                    className="rounded-2xl ring-olive ring-1 bg-olive/20 items-center justify-center flex w-[500px]"
+                    className="rounded-2xl ring-olive ring-1 bg-olive/20 items-center justify-center flex sm:w-[500px]"
                   />
-                  <div className=" flex text-center justify-center items-center mt-4 ring-1 rounded-2xl bg-grigio text-olive ring-olive gap-8 font-sans">
-                    <p className="">
-                      Check-in:{" "}
-                      {selectedDates.from &&
-                        selectedDates.from.toLocaleDateString()}
+                  <div className=" flex bg-grigio text-center justify-center mt-4 ring-1 rounded-2xl text-olive ring-olive gap-32 font-sans">
+                    <p>
+                      Check-in:
+                      <br />
+                      {selectedDates?.from
+                        ? selectedDates.from.toLocaleDateString()
+                        : "N/A"}
                     </p>
-                    <p className="">
-                      Check-out:{" "}
-                      {selectedDates.to &&
-                        selectedDates.to.toLocaleDateString()}
+                    <p>
+                      Check-out:
+                      <br />
+                      {selectedDates?.to
+                        ? selectedDates.to.toLocaleDateString()
+                        : "N/A"}
                     </p>
                   </div>
                 </div>
 
-                <div className="w-full mb-4">
+                <div className="w-full  mb-4">
                   <TextBox
                     reguired
                     title="Nome"
@@ -263,12 +279,12 @@ export default function Home() {
         </section>
 
         <section className="" id="about">
-          <div className="flex flex-col sm:justify-center sm:items-center px-6 -mt-[160px] text-olive bg-grigio">
-            <div className=" max-w-4xl">
-              <h5 className="text-[35px] sm:text-[50px] font-[800] z-10 mt-[100px] leading-10">
+          <div className="flex flex-col sm:justify-center sm:items-center -mt-[160px] text-olive bg-grigio">
+            <div className=" max-w-4xl ">
+              <h5 className="text-[35px] sm:text-center sm:text-[50px] font-[800] z-10 mt-[100px] leading-10">
                 Qualcosa sulla mia dimora..
               </h5>
-              <h6 className="text-[25px] sm:text-[30px] font-[600] leading-6 sm:leading-8 mt-4 sm:mt-6">
+              <h6 className="text-[25px] sm:text-[30px]  sm:text-center font-[600] leading-6 sm:leading-8 mt-4 sm:mt-6">
                 Il tuo comfort e la tua convenienza è la mia priorità
               </h6>
               <p className="my-4 text-lg font-sans font-[200] sm:text-[20px]">
@@ -294,7 +310,7 @@ export default function Home() {
               <h5 className=" text-[30px] font-[800] sm:text-[50px]">
                 Galleria Foto
               </h5>
-              <h6 className=" text-lg font-sans font-[200] pb-6 sm:text-[22px]">
+              <h6 className=" text-lg font-sans font-[200] pb-6 w-72 sm:w-full sm:text-[22px]">
                 A un pochi chilometri dal mare e dalla movida nostra
               </h6>
               <div className="">
@@ -356,10 +372,10 @@ export default function Home() {
                   le meraviglie di Catania!
                 </p>
               </div>
-              <div className=" bg-olive h-[400px] w-full text-white items-center flex justify-center">
+              {/* <div className=" bg-olive h-[400px] w-full text-white items-center flex justify-center">
                 Maps
-              </div>
-              {/* <MapComponent></MapComponent> */}
+              </div> */}
+              <MapComponent></MapComponent>
             </div>
           </div>
         </section>
@@ -374,21 +390,83 @@ export default function Home() {
                 <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
                 <div className=" flex justify-between">
                   <ol className=" ml-5 list-disc ">
-                    <li>Parco Madre Teresa di Calcutta</li>
-                    <li>Fontana dei Malavoglia</li>
-                    <li>Marsala, Selinunte E Segesta</li>
-                    <li>Villa Bellini</li>
-                    <li>Palazzo del Toscano</li>
-                    <li>Anfiteatro Romano di Catania</li>
-                    <li>Palazzo San Demetrio</li>
-                    <li>Piazza dell'Università</li>
-                    <li>Palazzo Biscari</li>
-                    <li>Piazza Duomo</li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/Pu1534Q2QN6tp8MUA"
+                      >
+                        Parco Madre Teresa di Calcutta
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/qgd1STJHMVbrskF26"
+                      >
+                        Fontana dei Malavoglia
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/GgWPV9AZvspZGcVu7"
+                      >
+                        Villa Bellini
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/jiEg7RHsDLK4Lbqk6"
+                      >
+                        Palazzo del Toscano
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/BenhtKkYiGbmg5mA8"
+                      >
+                        Anfiteatro Romano di Catania
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/6Mq88VXiZkZYPn8V7"
+                      >
+                        Palazzo San Demetrio
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/8FiMeuuZdKAsF1jd8"
+                      >
+                        Piazza dell'Università
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/NsQ8qLwXYpCefVB29"
+                      >
+                        Palazzo Biscari
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/juxqFohAYt6xdg1E7"
+                      >
+                        Piazza Duomo
+                      </a>
+                    </li>
                   </ol>
                   <ol className="">
                     <li>2,8 km</li>
                     <li>2,9 km</li>
-                    <li>3,3 km</li>
                     <li>3,4 km</li>
                     <li>3,7 km</li>
                     <li>3,8 km</li>
@@ -403,14 +481,70 @@ export default function Home() {
                 <h6 className=" text-[20px]">Per la movida:</h6>
                 <div className=" flex justify-between sm:h-[248px]">
                   <ol className=" ml-5 list-disc ">
-                    <li>LungoMare di Catania </li>
-                    <li>Porto Rossi </li>
-                    <li>Piazza Dante</li>
-                    <li>Teatro Romano Di Catania</li>
-                    <li>Casa Museo di Giovanno Verga</li>
-                    <li>Castello Ursino</li>
-                    <li>Porta Garibaldi</li>
-                    <li>A Putia Dell'Ostello </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/WXkh8FwdktDi7t3t7"
+                      >
+                        LungoMare di Catania
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/DguCSKMWZUR6NHW19"
+                      >
+                        Porto Rossi
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/626M1gcuvk8o1Ewi7"
+                      >
+                        Piazza Dante
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/bogt5xpzACPLWJis5"
+                      >
+                        Teatro Romano Di Catania
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/sMZrLdeZMiGqhEtM8"
+                      >
+                        Casa Museo di Giovanno Verga
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/UAuh9PEso7AhT6yD7"
+                      >
+                        Castello Ursino
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/W3oisgHJuYGFv4288"
+                      >
+                        Porta Garibaldi
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/jXJNfg4ekavkxiwL6"
+                      >
+                        A Putia Dell'Ostello
+                      </a>
+                    </li>
                   </ol>
                   <ol className="">
                     <li>2,4 km</li>
@@ -430,6 +564,25 @@ export default function Home() {
               Catania, ma sentiti libero di chiedermi qualsiasi cosa su luoghi e
               attrazioni che ti piacerebbe visitare!!
             </p>
+            <Carousel className="w-full max-w-sm">
+              <CarouselContent className="-ml-1">
+                {Array.from({ length: 500 }).map((_, index) => (
+                  <CarouselItem key={index} className="pl-1 md:basis-1/3">
+                    <div className="p-1">
+                      <Card>
+                        <CardContent className="flex aspect-square items-center justify-center p-6">
+                          <span className="text-2xl font-semibold">
+                            {index + 1}
+                          </span>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
         <div className=" h-5 bg-olive/80 "></div>
@@ -469,4 +622,14 @@ export default function Home() {
       </div>
     </>
   );
+}
+
+{
+  /*
+  cosa da aggiungere
+  -prezzo e valutazione booking in home page  V
+  -carosello attrazioni + descrizione 
+  -aggiunta ristoranti
+  -rivalutare recensioni clienti (dissolvenza con possibilità di vederle tutte al click)
+*/
 }
