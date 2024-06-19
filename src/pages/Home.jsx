@@ -27,6 +27,20 @@ import casa_3 from "../assets/casa_3.jpeg";
 import elli from "../assets/ellisse_modificato_1.png";
 import elli2 from "../assets/ellisse_modificato_2.png";
 import { Star } from "lucide-react";
+import {
+  LuAccessibility,
+  LuBed,
+  LuBus,
+  LuChefHat,
+  LuDog,
+  LuHome,
+  LuLanguages,
+  LuPalmtree,
+  LuParkingCircle,
+  LuShoppingCart,
+  LuShowerHead,
+  LuWifi,
+} from "react-icons/lu";
 
 const images = [casa_1, casa_2, casa_3];
 
@@ -196,20 +210,20 @@ export default function Home() {
             <h6 className="py-6 z-10 text-[37px] sm:text-[50px] font-[800] font-Bodoni text-olive">
               Prenota il tuo soggiorno con me.
             </h6>
-            <div className="z-10 flex flex-col items-center max-w-xl w-full pb-10 ring-2 ring-olive">
+            <div className="z-10 flex flex-col items-center max-w-xl w-full pb-10 rounded-sm shadow-2xl ring-2 ring-olive">
               <h6 className="p-6 text-[20px] font-sans font-[200] text-justify">
                 Contattami per sapere se sono disponibili delle camere per
                 vivere una vacanza da sogno.
               </h6>
-              <form onSubmit={handleSubmit} className=" font-sans mb-4">
+              <form onSubmit={handleSubmit} className=" font-sans px-6 mb-4">
                 <div className="mb-6">
                   <Calendar
                     mode="range"
                     selected={selectedDates}
                     onSelect={handleDateSelect}
-                    className="rounded-2xl ring-olive ring-1 bg-olive/20 items-center justify-center flex sm:w-[500px]"
+                    className="rounded-sm ring-olive ring-1 bg-olive/20 items-center justify-center flex sm:w-[500px]"
                   />
-                  <div className=" flex bg-grigio text-center justify-center mt-4 ring-2 rounded-2xl text-olive ring-olive gap-32 font-sans">
+                  <div className=" flex bg-grigio text-center justify-center mt-4 ring-2 rounded-sm text-olive ring-olive gap-32 font-sans">
                     <p className=" ">
                       Check-in:
                       <br />
@@ -292,16 +306,204 @@ export default function Home() {
               <p className="my-4 text-lg font-sans font-[200] sm:text-[20px]">
                 Questa casa moderna e luminosa offre una{" "}
                 <span className=" text-olive font-[600]">
-                  vista panoramica mozzafiato
-                </span>{" "}
+                  vista panoramica mozzafiato{" "}
+                </span>
                 sul paesaggio circostante, con scorci sul mare che aggiungono un
                 tocco di serenità. Gli interni sono caratterizzati da ampi spazi
-                aperti, pavimenti in piastrelle lucide e un{" "}
+                aperti, pavimenti in piastrelle lucide e un
                 <span className=" text-olive font-[600]">
-                  design minimalista
-                </span>{" "}
+                  {" "}
+                  design minimalista{" "}
+                </span>
                 che enfatizza la luce naturale.
               </p>
+            </div>
+          </div>
+          <div className=" bg-grigio p-6 flex justify-center items-center">
+            <div className=" bg-giallino rounded-sm ring-1 ring-olive px-2 py-1 w-full max-w-4xl">
+              <h5 className=" text-[30px] font-[600] text-center">
+                Tutti i servizi che offriamo
+              </h5>
+              <div className="font-sans">
+                <div className=" bg-transparent/20 flex gap-4 mb-4 ring-1 rounded-t-sm p-2 ring-olive">
+                  <div>
+                    <div className=" flex">
+                      <LuParkingCircle className=" mt-1 mr-2" />
+                      <h6 className="text-lg font-[600]">Parcheggio</h6>
+                    </div>
+                    <p>
+                      Ampio parcheggio privato disponibile gratuitamente in loco
+                    </p>
+                  </div>
+                  <div>
+                    <div className="flex">
+                      <LuDog className="mt-1 mr-2" />
+                      <h6 className="text-lg font-[600]">Animali</h6>
+                    </div>
+                    <p>
+                      Animali ammessi su richiesta. Potrebbe essere richiesto un
+                      supplemento.
+                    </p>
+                  </div>
+                  <div>
+                    <div className=" flex ">
+                      <LuWifi className="mt-1 mr-2" />
+                      <h6 className="text-lg font-[600]">Internet</h6>
+                    </div>
+                    <p>
+                      Internet WiFi disponibile gratuitamente in tutta la
+                      struttura.
+                    </p>
+                  </div>
+                  <div>
+                    <div className=" flex">
+                      <LuAccessibility className=" mt-1 mr-2" />
+                      <h6 className="text-lg font-[600]">Accessibiltà </h6>
+                    </div>
+                    <p>Piani superiori accessibili tramite ascensore</p>
+                  </div>
+                </div>
+                <div className="bg-transparent/20 flex justify-center gap-20 rounded-b-sm ring-1 ring-olive -mt-4 mb-1 py-4 px-6">
+                  <div className="">
+                    <div>
+                      <div className=" flex">
+                        <LuHome className=" mt-1 mr-2" />
+                        <h6 className=" text-lg font-[600]">
+                          Confort della casa
+                        </h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>Area fumatori designata</li>
+                        <li>Aria condizionata</li>
+                        <li>Tv a schermo piatto</li>
+                        <li>Scrivania</li>
+                        <li>Zona Soggiorno</li>
+                        <li>Zona Pranzo</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <div className=" flex">
+                        <LuBed className="mt-1 mr-2" />
+                        <h6 className="text-lg font-[600]">
+                          Servizio in camera
+                        </h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>Stendibiancheria</li>
+                        <li>Stand appendiabiti</li>
+                        <li>Ferro e asse da stiro</li>
+                        <li>Ferro da stiro</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <div className=" flex">
+                        <LuBus className="mt-1 mr-2" />
+                        <h6 className="text-lg font-[600]">
+                          Servizio di Trasporto
+                        </h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>
+                          Noleggio biciclette{" "}
+                          <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
+                            a pagamento
+                          </span>
+                        </li>
+                        <li className=" my-1">
+                          Servizio navetta{" "}
+                          <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
+                            a pagamento
+                          </span>
+                        </li>
+                        <li>
+                          Biglietti per i mezzi di trasporto{" "}
+                          <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
+                            a pagamento
+                          </span>
+                        </li>
+                        <li>Autonoleggio</li>
+                        <li>Navetta Aereoportuale</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <div className=" flex">
+                        <LuPalmtree className="mt-1 mr-2" />
+                        <h6 className="text-lg font-[600]">
+                          Spazzi all'aperto
+                        </h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>
+                          Ampio parco di 30.000mq separato dal parcheggio{" "}
+                        </li>
+                        <li>Fronte spiaggia</li>
+                        <li>Balcone</li>
+                        <li>Vista Città</li>
+                        <li>Vista Giardino</li>
+                        <li>Vista Mare</li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div>
+                      <div className=" flex">
+                        <LuShowerHead className=" mt-1 mr-2" />
+                        <h6 className=" text-lg font-[600]">Bagno</h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>Bagno privato</li>
+                        <li>Prodotti da bagno in omaggio</li>
+                        <li>Asciugacapelli</li>
+                        <li>Vasca o Doccia</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <div className=" flex">
+                        <LuChefHat className=" mt-1 mr-2" />
+                        <h6 className=" text-lg font-[600]">Cucina</h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>Tavolo da pranzo</li>
+                        <li> Prodotti per le pulizie</li>
+                        <li>tostapane</li>
+                        <li>Piano cottura</li>
+                        <li>Bollitore</li>
+                        <li>Cucina</li>
+                        <li>Lavatrice</li>
+                        <li>Forno a microonde</li>
+                        <li>Frigorifero</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <div className=" flex">
+                        <LuShoppingCart className="mt-1 mr-2" />
+                        <h6 className=" text-lg font-[600]">Negozi</h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>Market</li>
+                        <li>Pizzaria</li>
+                        <li>Panificio</li>
+                        <li>Ristorante</li>
+                        <li>Meccanico</li>
+                        <li>Fermata Bus</li>
+                        <li>Parrucchiere</li>
+                        <li>Centro estetico</li>
+                      </ol>
+                    </div>
+                    <div>
+                      <div className=" flex">
+                        <LuLanguages className=" mt-1 mr-2" />
+                        <h6 className=" text-lg font-[600]">Lingue parlate</h6>
+                      </div>
+                      <ol className=" list-disc ml-5">
+                        <li>Inglese</li>
+                        <li>Italiano</li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -388,7 +590,7 @@ export default function Home() {
               Cosa troverai vicino alla residenza:
             </h6>
             <div className=" sm:max-w-4xl sm:flex sm:justify-center sm:items-center sm:gap-10 sm:w-full sm:mb-4">
-              <div className="sm:h-[320px] p-3 ring-2 ring-olive shadow-xl mb-6 sm:mb-0">
+              <div className="sm:h-[320px] p-3 ring-2 ring-olive rounded-sm shadow-xl mb-6 sm:mb-0">
                 <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
                 <div className=" flex justify-between">
                   <ol className=" ml-5 list-disc ">
@@ -479,7 +681,7 @@ export default function Home() {
                   </ol>
                 </div>
               </div>
-              <div className="sm:h-[320px] p-3 ring-2 ring-olive shadow-xl">
+              <div className="sm:h-[320px] p-3 ring-2 rounded-sm ring-olive shadow-xl">
                 <h6 className=" text-[20px]">Per la movida:</h6>
                 <div className=" flex justify-between sm:h-[248px]">
                   <ol className=" ml-5 list-disc ">
@@ -594,7 +796,7 @@ export default function Home() {
               Le opinioni dei nostri ospiti:
             </h6>
             <div className="sm:flex sm:justify-center sm:items-center sm:gap-8 sm:max-w-4xl ">
-              <div className=" ring-2 ring-olive p-2 mb-4 shadow-2xl">
+              <div className=" ring-2 rounded-sm ring-olive p-2 mb-4 shadow-2xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, nobis rerum nostrum illo repellat ut officiis
@@ -607,10 +809,12 @@ export default function Home() {
                     <Star className=" stroke-black fill-yellow-500" />
                     <Star className=" stroke-black fill-yellow-500" />
                     <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black " />
                   </div>
                 </div>
               </div>
-              <div className=" ring-2 ring-olive p-2 mb-4 shadow-2xl">
+              <div className=" ring-2 rounded-sm ring-olive p-2 mb-4 shadow-2xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, nobis rerum nostrum illo repellat ut officiis
@@ -623,10 +827,12 @@ export default function Home() {
                     <Star className=" stroke-black fill-yellow-500" />
                     <Star className=" stroke-black fill-yellow-500" />
                     <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black " />
                   </div>
                 </div>
               </div>
-              <div className=" ring-2 ring-olive p-2 mb-4 shadow-2xl">
+              <div className=" ring-2 rounded-sm ring-olive p-2 mb-4 shadow-2xl">
                 <p className=" font-sans text-[200] text-[16px] mb-2">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Accusantium, nobis rerum nostrum illo repellat ut officiis
@@ -639,10 +845,11 @@ export default function Home() {
                     <Star className=" stroke-black fill-yellow-500" />
                     <Star className=" stroke-black fill-yellow-500" />
                     <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black fill-yellow-500" />
+                    <Star className=" stroke-black " />
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
         </section>

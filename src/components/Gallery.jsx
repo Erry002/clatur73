@@ -46,7 +46,7 @@ function Gallery() {
           {images.map((image, index) => (
             <CarouselItem key={index} className=" flex px-72 sm:px-0 sm:basis-1/3 justify-center items-center">
               {/* Contenuto del singolo item del carousel */}
-              <img src={image} alt={`foto casa ${index + 1}`} className="sm:m-1 sm:ml-0 bg-giallino p-1 ring-1 ring-olive h-96 w-96 mt-1 ml-4" />
+              <img src={image} alt={`foto casa ${index + 1}`} className="sm:m-1 sm:ml-0 bg-giallino p-1 ring-1 rounded-sm ring-olive h-96 w-96 mt-1 ml-4" />
             </CarouselItem>
           ))}
         </CarouselContent>

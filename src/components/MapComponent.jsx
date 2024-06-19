@@ -10,7 +10,7 @@ const MapComponent = () => {
         style={{ border: "0" }}
         allowFullScreen=""
         loading="lazy"
-        className=" rounded-xl shadow-2xl ring-2 ring-olive"
+        className=" rounded-sm shadow-2xl ring-2 ring-olive"
         referrerPolicy="no-referrer-when-downgrade"
       />
       {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg">

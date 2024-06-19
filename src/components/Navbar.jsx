@@ -39,7 +39,7 @@ const Navbar = () => {
                 </Link>
                 <p>Una piccola didascalia</p>
                 <div className="hidden sm:block sm:h-0 sm:z-50 sm:relative sm:w-full">
-                  <div className="bg-giallino h-14 container w-[100vh] shadow-xl flex justify-center items-center">
+                  <div className="bg-giallino rounded-sm h-14 container w-[100vh] shadow-xl flex justify-center items-center">
                     <div>
                       <Link
                         to="home"
