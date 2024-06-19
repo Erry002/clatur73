@@ -325,7 +325,7 @@ export default function Home() {
                 Tutti i servizi che offriamo
               </h5>
               <div className="font-sans">
-                <div className=" bg-transparent/20 flex gap-4 mb-4 ring-1 rounded-t-sm p-2 ring-olive">
+                <div className=" bg-grigio/30 flex flex-col sm:flex-row px-6 gap-4 mb-4 ring-1 rounded-t-sm p-2 ring-olive">
                   <div>
                     <div className=" flex">
                       <LuParkingCircle className=" mt-1 mr-2" />
@@ -363,9 +363,11 @@ export default function Home() {
                     <p>Piani superiori accessibili tramite ascensore</p>
                   </div>
                 </div>
-                <div className="bg-transparent/20 flex justify-center gap-20 rounded-b-sm ring-1 ring-olive -mt-4 mb-1 py-4 px-6">
+
+
+                <div className=" flex flex-col bg-grigio/30 sm:flex-row justify-center rounded-b-sm sm:gap-32 ring-1 ring-olive -mt-4 mb-1  py-4 px-6">
                   <div className="">
-                    <div>
+                    <div className="my-4">
                       <div className=" flex">
                         <LuHome className=" mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">
@@ -381,7 +383,7 @@ export default function Home() {
                         <li>Zona Pranzo</li>
                       </ol>
                     </div>
-                    <div>
+                    <div className=" my-4">
                       <div className=" flex">
                         <LuBed className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
@@ -395,7 +397,7 @@ export default function Home() {
                         <li>Ferro da stiro</li>
                       </ol>
                     </div>
-                    <div>
+                    <div className=" my-4">
                       <div className=" flex">
                         <LuBus className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
@@ -416,7 +418,8 @@ export default function Home() {
                           </span>
                         </li>
                         <li>
-                          Biglietti per i mezzi di trasporto{" "}
+                          Biglietti per i mezzi <br />
+                          di trasporto{" "}
                           <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
                             a pagamento
                           </span>
@@ -425,7 +428,7 @@ export default function Home() {
                         <li>Navetta Aereoportuale</li>
                       </ol>
                     </div>
-                    <div>
+                    <div className=" my-4">
                       <div className=" flex">
                         <LuPalmtree className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
@@ -434,7 +437,8 @@ export default function Home() {
                       </div>
                       <ol className=" list-disc ml-5">
                         <li>
-                          Ampio parco di 30.000mq separato dal parcheggio{" "}
+                          Ampio parco di 30.000mq <br />
+                          separato dal parcheggio{" "}
                         </li>
                         <li>Fronte spiaggia</li>
                         <li>Balcone</li>
@@ -446,7 +450,7 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <div>
+                    <div className=" my-4">
                       <div className=" flex">
                         <LuShowerHead className=" mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">Bagno</h6>
@@ -458,7 +462,7 @@ export default function Home() {
                         <li>Vasca o Doccia</li>
                       </ol>
                     </div>
-                    <div>
+                    <div className=" my-4">
                       <div className=" flex">
                         <LuChefHat className=" mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">Cucina</h6>
@@ -475,7 +479,7 @@ export default function Home() {
                         <li>Frigorifero</li>
                       </ol>
                     </div>
-                    <div>
+                    <div className=" my-4">
                       <div className=" flex">
                         <LuShoppingCart className="mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">Negozi</h6>
@@ -491,7 +495,7 @@ export default function Home() {
                         <li>Centro estetico</li>
                       </ol>
                     </div>
-                    <div>
+                    <div className=" mt-4">
                       <div className=" flex">
                         <LuLanguages className=" mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">Lingue parlate</h6>
@@ -589,10 +593,10 @@ export default function Home() {
             <h6 className=" text-olive p-3 mb-2 sm:mb-8 sm:mt-2 text-3xl sm:text-[50px] font-Bodoni font-[500] w-[400px] sm:w-full sm:text-center leading-10">
               Cosa troverai vicino alla residenza:
             </h6>
-            <div className=" sm:max-w-4xl sm:flex sm:justify-center sm:items-center sm:gap-10 sm:w-full sm:mb-4">
+            <div className=" sm:max-w-5xl sm:flex sm:flex-col xl:flex-row sm:justify-center sm:items-center sm:gap-10 sm:w-full sm:mb-4">
               <div className="sm:h-[320px] p-3 ring-2 ring-olive rounded-sm shadow-xl mb-6 sm:mb-0">
                 <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
-                <div className=" flex justify-between">
+                <div className=" flex justify-between gap-4">
                   <ol className=" ml-5 list-disc ">
                     <li>
                       <a
@@ -681,10 +685,10 @@ export default function Home() {
                   </ol>
                 </div>
               </div>
-              <div className="sm:h-[320px] p-3 ring-2 rounded-sm ring-olive shadow-xl">
+              <div className="sm:h-[320px] p-3 ring-2 rounded-sm ring-olive shadow-xl mb-6 sm:mb-0">
                 <h6 className=" text-[20px]">Per la movida:</h6>
                 <div className=" flex justify-between sm:h-[248px]">
-                  <ol className=" ml-5 list-disc ">
+                  <ol className=" ml-5 list-disc">
                     <li>
                       <a
                         className=" underline hover:text-olive/50 underline-offset-2"
@@ -759,6 +763,69 @@ export default function Home() {
                     <li>4,7 km</li>
                     <li>5,0 km</li>
                     <li>5,4 km</li>
+                  </ol>
+                </div>
+              </div>
+              <div className="sm:h-[320px] p-3 ring-2 rounded-sm ring-olive shadow-xl">
+                <h6 className=" text-[20px]">Ristoranti:</h6>
+                <div className=" flex justify-between sm:h-[248px]">
+                  <ol className=" ml-5 list-disc">
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/BWYMcynVYYLzzyHfA"
+                      >
+                        Pizza Time
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/5EivJQ83MUHfw5h36"
+                      >
+                        Al Braciere da donna Pippa
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/e9nvEb4nF8S85mKx9"
+                      >
+                        Botanike Resturant
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/tkGZpriYfkZhtRLa7"
+                      >
+                        Quattrochiacchiere
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/jZAcpYWpwqDkoqyC6"
+                      >
+                        Gohan Catania
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className=" underline hover:text-olive/50 underline-offset-2"
+                        href="https://maps.app.goo.gl/cnMaRuG3oSHUVbiZ6"
+                      >
+                        I Dolci di Nonna Vincenza
+                      </a>
+                    </li>
+                  </ol>
+                  <ol className="">
+                    <li>800 m</li>
+                    <li>900 m</li>
+                    <li>1,3 km</li>
+                    <li>1,6 km</li>
+                    <li>1,7 km</li>
+                    <li>2,1 km</li>
                   </ol>
                 </div>
               </div>

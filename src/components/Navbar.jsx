@@ -13,6 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { LuSend } from "react-icons/lu";
 
 const variants = {
   base: "text-gray-700 hover:text-black",
@@ -28,16 +29,19 @@ const Navbar = () => {
         <div className="flex items-center justify-center py-4">
           <div className="hidden w-full max-w-4xl pr-10 sm:flex sm:justify-center sm:items-center">
             <div className="flex flex-col items-center sm:text-center sm:justify-center justify-between font-Bodoni">
-              <div>
-                <Link
-                  to="home"
-                  smooth={true}
-                  duration={500}
-                  className=" font-extrabold text-xl text-olive cursor-pointer"
-                >
-                  Clatur73
-                </Link>
-                <p>Una piccola didascalia</p>
+              <div className="">
+                <div className=" flex justify-center -mt-2 items-center">
+                  <LuSend className=" mr-2 size-6"/>
+                  <Link
+                    to="home"
+                    smooth={true}
+                    duration={500}
+                    className=" font-extrabold mt-1 text-xl text-olive cursor-pointer"
+                    >
+                      Clatur73
+                  </Link>
+                </div>
+                <p>Una casa lontano da casa</p>
                 <div className="hidden sm:block sm:h-0 sm:z-50 sm:relative sm:w-full">
                   <div className="bg-giallino rounded-sm h-14 container w-[100vh] shadow-xl flex justify-center items-center">
                     <div>
