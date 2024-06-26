@@ -15,13 +15,7 @@ import {
 } from "@/components/ui/sheet";
 import { LuSend } from "react-icons/lu";
 
-const variants = {
-  base: "text-gray-700 hover:text-black",
-  active: "text-red-500 hover:text-red-500 underline underline-offset-2",
-};
-
 const Navbar = () => {
-  const { childObjects } = colors;
 
   return (
     <nav className="shadow-xl sticky top-0 z-50 mb-0 bg-grigio font-Bodoni">

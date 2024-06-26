@@ -1,0 +1,79 @@
+{
+    "image_catania": [
+        {
+            "title": "Titolo 1",
+            "description": "Descrizione dell'immagine 1.",
+            "url": "@/assets/foto_catania/IMG-1.jpg"
+        },
+        {
+            "title": "Titolo 2",
+            "description": "Descrizione dell'immagine 2.",
+            "url": "../../assets/foto_catania/IMG-2.jpg"
+        },
+        {
+            "title": "Titolo 3",
+            "description": "Descrizione dell'immagine 3.",
+            "url": "/assets/foto_catania/IMG-3.jpg"
+        },
+        {
+            "title": "Titolo 4",
+            "description": "Descrizione dell'immagine 4.",
+            "url": "/assets/foto_catania/IMG-4.jpg"
+        },
+        {
+            "title": "Titolo 5",
+            "description": "Descrizione dell'immagine 5.",
+            "url": "/assets/foto_catania/IMG-5.jpg"
+        },
+        {
+            "title": "Titolo 6",
+            "description": "Descrizione dell'immagine 6.",
+            "url": "/assets/foto_catania/IMG-6.jpg"
+        },
+        {
+            "title": "Titolo 7",
+            "description": "Descrizione dell'immagine 7.",
+            "url": "/assets/foto_catania/IMG-7.jpg"
+        },
+        {
+            "title": "Titolo 8",
+            "description": "Descrizione dell'immagine 8.",
+            "url": "/assets/foto_catania/IMG-8.jpg"
+        },
+        {
+            "title": "ciao",
+            "description": "Descrizione dell'immagine 9.",
+            "url": "/assets/foto_catania/IMG-9.jpg"
+        },
+        {
+            "title": "Titolo 10",
+            "description": "Descrizione dell'immagine 10.",
+            "url": "/assets/foto_catania/IMG-10.jpg"
+        },
+        {
+            "title": "Titolo 11",
+            "description": "Descrizione dell'immagine 11.",
+            "url": "/assets/foto_catania/IMG-11.jpg"
+        },
+        {
+            "title": "Titolo 12",
+            "description": "Descrizione dell'immagine 12.",
+            "url": "/assets/foto_catania/IMG-12.jpg"
+        },
+        {
+            "title": "Titolo 13",
+            "description": "Descrizione dell'immagine 13.",
+            "url": "/assets/foto_catania/IMG-13.jpg"
+        },
+        {
+            "title": "Titolo 14",
+            "description": "Descrizione dell'immagine 14.",
+            "url": "/assets/foto_catania/IMG-14.jpg"
+        },
+        {
+            "title": "Titolo 15",
+            "description": "Descrizione dell'immagine 15.",
+            "url": "../../assets/foto_catania/IMG-15.jpg"
+        }
+    ]
+}

@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 import * as React from "react";
 import emailjs from "emailjs-com";
@@ -15,6 +14,10 @@ import MapComponent from "../components/MapComponent.jsx";
 import colors from "../components/colors.json";
 // import recensioni from "@/components/recensioni.json"
 import ReviewsCarousel from "../components/ReviewsCarousel.jsx";
+import images_catania from "../components/ui/images_catania.json";
+import imagesCatania from "../components/ui/images_catania.js";
+
+import img from "@/assets/foto_catania/IMG-1.jpg";
 
 import {
   Carousel,
@@ -884,25 +887,25 @@ export default function Home() {
                 orientation="horizontal"
                 className="overflow-x-hidden sm:max-w-5xl"
               >
-                <CarouselContent className="gap-2 mb-2 ">
-                  {/* Iterazione sugli items del carousel */}
-                  {Array.from({ length: 100 }).map((_, index) => (
+                <CarouselContent className="gap-2 mb-2">
+                  {imagesCatania.map((items, index) => (
                     <CarouselItem
                       key={index}
                       className="flex items-center justify-center rounded-sm sm:px-0 sm:basis-1/3"
                     >
-                      <img
-                        src={`https://picsum.photos/400/400?random=${
-                          index + 1
-                        }`}
-                        alt={`foto casa ${index + 1}`}
-                        className="sm:m-1 sm:ml-0 bg-giallino p-1 ring-1 rounded-sm ring-olive w-80 h-96 sm:w-[400px] mt-1 ml-4"
-                      />
+                      <div className=" flex flex-col-reverse justify-center items-center bg-giallino p-2 pb-8 rounded-sm pt-4 px-6">
+                        <h6 className=" bg-olive/20 w-[96%] rounded-sm font-Bodoni font-[600] text-center py-1 z-50 -mt-10">{items.title}</h6>
+                        <img
+                          src={items.url}
+                          alt={`foto catania ${index + 1}`}
+                          className="sm:m-1 sm:ml-0 bg-no-repeat bg-contain shadow-2xl bg-giallino p-2 pb-12 ring-1 rounded-sm ring-olive h-[600px] sm:w-[400px] mt-1"
+                        />
+                      </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-1" />
-                <CarouselNext className="absolute right-1" />
+                <CarouselPrevious className="absolute left-1 shadow-xl" />
+                <CarouselNext className="absolute right-1 shadow-xl" />
               </Carousel>
             </div>
           </div>
