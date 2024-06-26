@@ -8,10 +8,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button.jsx";
 import TextBox from "../components/TextBox.jsx";
 import CheckBox from "../components/CheckBox.jsx";
+import BoxRecensioni from "../components/BoxRecensioni.jsx";
 import TextArea from "../components/TextArea.jsx";
 import Gallery from "../components/Gallery.jsx";
 import MapComponent from "../components/MapComponent.jsx";
 import colors from "../components/colors.json";
+// import recensioni from "@/components/recensioni.json"
+import ReviewsCarousel from "../components/ReviewsCarousel.jsx";
 
 import {
   Carousel,
@@ -140,7 +143,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-col overflow-hidden scrollbar-hide w-full min-h-screen scroll-smooth overflow-x-hidden font-Bodoni">
+      <div className="flex flex-col w-full min-h-screen overflow-hidden overflow-x-hidden scrollbar-hide scroll-smooth font-Bodoni">
         <section className="overflow-x-hidden" id="home">
           {/*carosello immagini */}
           <div className="relative justify-center h-full overflow-x-hidden">
@@ -161,13 +164,13 @@ export default function Home() {
                 <p className="absolute text-white top-[240px] sm:top-[480px] md:top-[420px] xl:top-[420px] font-[400] left-14 text-lg sm:text-[24px]">
                   Casa vacanza con calore, confort e carattere
                 </p>
-                <div className="absolute bottom-24 left-12 sm:bottom-20 text-white text-xl">
+                <div className="absolute text-xl text-white bottom-24 left-12 sm:bottom-20">
                   <p>Camere a partire da: 50€</p>
                 </div>
-                <div className="absolute bottom-16 left-12 sm:right-12 sm:left-auto sm:bottom-20 text-white text-xl ">
-                  <h6 className=" ">Valutazione da Booking</h6>
+                <div className="absolute text-xl text-white bottom-16 left-12 sm:right-12 sm:left-auto sm:bottom-20 ">
+                  <h6 className="">Valutazione da Booking</h6>
                   <div className="absolute">
-                    <div className=" flex">
+                    <div className="flex ">
                       <Star className=" fill-giallino stroke-giallino/90" />
                       <Star className=" fill-giallino stroke-giallino/90" />
                       <Star className=" fill-giallino stroke-giallino/90" />
@@ -210,12 +213,12 @@ export default function Home() {
             <h6 className="py-6 z-10 text-[37px] sm:text-[50px] font-[800] font-Bodoni text-olive">
               Prenota il tuo soggiorno con me.
             </h6>
-            <div className="z-10 flex flex-col items-center max-w-xl w-full pb-10 rounded-sm shadow-2xl ring-2 ring-olive">
+            <div className="z-10 flex flex-col items-center w-full max-w-xl pb-10 rounded-sm shadow-2xl ring-2 ring-olive">
               <h6 className="p-6 text-[20px] font-sans font-[200] text-justify">
                 Contattami per sapere se sono disponibili delle camere per
                 vivere una vacanza da sogno.
               </h6>
-              <form onSubmit={handleSubmit} className=" font-sans px-6 mb-4">
+              <form onSubmit={handleSubmit} className="px-6 mb-4 font-sans ">
                 <div className="mb-6">
                   <Calendar
                     mode="range"
@@ -223,8 +226,8 @@ export default function Home() {
                     onSelect={handleDateSelect}
                     className="rounded-sm ring-olive ring-1 bg-olive/20 items-center justify-center flex sm:w-[500px]"
                   />
-                  <div className=" flex bg-grigio text-center justify-center mt-4 ring-2 rounded-sm text-olive ring-olive gap-32 font-sans">
-                    <p className=" ">
+                  <div className="flex justify-center gap-32 mt-4 font-sans text-center rounded-sm bg-grigio ring-2 text-olive ring-olive">
+                    <p className="">
                       Check-in:
                       <br />
                       {selectedDates?.from
@@ -241,7 +244,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="w-full  mb-4">
+                <div className="w-full mb-4">
                   <TextBox
                     reguired
                     title="Nome"
@@ -280,7 +283,7 @@ export default function Home() {
                 />
                 <Button
                   type="submit"
-                  className="items-center ring-2 ring-olive bg-grigio text-olive w-full my-2 mt-4 hover:olive/20"
+                  className="items-center w-full my-2 mt-4 ring-2 ring-olive bg-grigio text-olive hover:olive/20"
                 >
                   Invia
                 </Button>
@@ -296,7 +299,7 @@ export default function Home() {
 
         <section className="" id="about">
           <div className="flex flex-col sm:justify-center sm:items-center -mt-[160px] text-olive bg-grigio">
-            <div className=" px-6 max-w-4xl ">
+            <div className="max-w-4xl px-6 ">
               <h5 className="text-[35px] sm:text-center sm:text-[50px] font-[800] z-10 mt-[100px] leading-10">
                 Qualcosa sulla mia dimora..
               </h5>
@@ -319,16 +322,16 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div className=" bg-grigio p-6 flex justify-center items-center">
-            <div className=" bg-giallino rounded-sm ring-1 ring-olive px-2 py-1 w-full max-w-4xl">
+          <div className="flex items-center justify-center p-6 bg-grigio">
+            <div className="w-full max-w-4xl px-2 py-1 rounded-sm bg-giallino ring-1 ring-olive">
               <h5 className=" text-[30px] font-[600] text-center">
                 Tutti i servizi che offriamo
               </h5>
               <div className="font-sans">
-                <div className=" bg-grigio/30 flex flex-col sm:flex-row px-6 gap-4 mb-4 ring-1 rounded-t-sm p-2 ring-olive">
+                <div className="flex flex-col gap-4 p-2 px-6 mb-4 rounded-t-sm bg-grigio/30 sm:flex-row ring-1 ring-olive">
                   <div>
-                    <div className=" flex">
-                      <LuParkingCircle className=" mt-1 mr-2" />
+                    <div className="flex ">
+                      <LuParkingCircle className="mt-1 mr-2 " />
                       <h6 className="text-lg font-[600]">Parcheggio</h6>
                     </div>
                     <p>
@@ -346,7 +349,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div>
-                    <div className=" flex ">
+                    <div className="flex ">
                       <LuWifi className="mt-1 mr-2" />
                       <h6 className="text-lg font-[600]">Internet</h6>
                     </div>
@@ -356,25 +359,24 @@ export default function Home() {
                     </p>
                   </div>
                   <div>
-                    <div className=" flex">
-                      <LuAccessibility className=" mt-1 mr-2" />
+                    <div className="flex ">
+                      <LuAccessibility className="mt-1 mr-2 " />
                       <h6 className="text-lg font-[600]">Accessibiltà </h6>
                     </div>
                     <p>Piani superiori accessibili tramite ascensore</p>
                   </div>
                 </div>
 
-
-                <div className=" flex flex-col bg-grigio/30 sm:flex-row justify-center rounded-b-sm sm:gap-32 ring-1 ring-olive -mt-4 mb-1  py-4 px-6">
+                <div className="flex flex-col justify-center px-6 py-4 mb-1 -mt-4 rounded-b-sm bg-grigio/30 sm:flex-row sm:gap-32 ring-1 ring-olive">
                   <div className="">
                     <div className="my-4">
-                      <div className=" flex">
-                        <LuHome className=" mt-1 mr-2" />
+                      <div className="flex ">
+                        <LuHome className="mt-1 mr-2 " />
                         <h6 className=" text-lg font-[600]">
                           Confort della casa
                         </h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>Area fumatori designata</li>
                         <li>Aria condizionata</li>
                         <li>Tv a schermo piatto</li>
@@ -383,44 +385,44 @@ export default function Home() {
                         <li>Zona Pranzo</li>
                       </ol>
                     </div>
-                    <div className=" my-4">
-                      <div className=" flex">
+                    <div className="my-4 ">
+                      <div className="flex ">
                         <LuBed className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
                           Servizio in camera
                         </h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>Stendibiancheria</li>
                         <li>Stand appendiabiti</li>
                         <li>Ferro e asse da stiro</li>
                         <li>Ferro da stiro</li>
                       </ol>
                     </div>
-                    <div className=" my-4">
-                      <div className=" flex">
+                    <div className="my-4 ">
+                      <div className="flex ">
                         <LuBus className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
                           Servizio di Trasporto
                         </h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>
                           Noleggio biciclette{" "}
-                          <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
+                          <span className="p-1 text-sm rounded-sm bg-giallino/50 ring-1 ring-olive">
                             a pagamento
                           </span>
                         </li>
-                        <li className=" my-1">
+                        <li className="my-1 ">
                           Servizio navetta{" "}
-                          <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
+                          <span className="p-1 text-sm rounded-sm bg-giallino/50 ring-1 ring-olive">
                             a pagamento
                           </span>
                         </li>
                         <li>
                           Biglietti per i mezzi <br />
                           di trasporto{" "}
-                          <span className=" bg-giallino/50 p-1 text-sm rounded-sm ring-1 ring-olive">
+                          <span className="p-1 text-sm rounded-sm bg-giallino/50 ring-1 ring-olive">
                             a pagamento
                           </span>
                         </li>
@@ -428,14 +430,14 @@ export default function Home() {
                         <li>Navetta Aereoportuale</li>
                       </ol>
                     </div>
-                    <div className=" my-4">
-                      <div className=" flex">
+                    <div className="my-4 ">
+                      <div className="flex ">
                         <LuPalmtree className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
                           Spazzi all'aperto
                         </h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>
                           Ampio parco di 30.000mq <br />
                           separato dal parcheggio{" "}
@@ -450,24 +452,24 @@ export default function Home() {
                   </div>
 
                   <div>
-                    <div className=" my-4">
-                      <div className=" flex">
-                        <LuShowerHead className=" mt-1 mr-2" />
+                    <div className="my-4 ">
+                      <div className="flex ">
+                        <LuShowerHead className="mt-1 mr-2 " />
                         <h6 className=" text-lg font-[600]">Bagno</h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>Bagno privato</li>
                         <li>Prodotti da bagno in omaggio</li>
                         <li>Asciugacapelli</li>
                         <li>Vasca o Doccia</li>
                       </ol>
                     </div>
-                    <div className=" my-4">
-                      <div className=" flex">
-                        <LuChefHat className=" mt-1 mr-2" />
+                    <div className="my-4 ">
+                      <div className="flex ">
+                        <LuChefHat className="mt-1 mr-2 " />
                         <h6 className=" text-lg font-[600]">Cucina</h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>Tavolo da pranzo</li>
                         <li> Prodotti per le pulizie</li>
                         <li>tostapane</li>
@@ -479,12 +481,12 @@ export default function Home() {
                         <li>Frigorifero</li>
                       </ol>
                     </div>
-                    <div className=" my-4">
-                      <div className=" flex">
+                    <div className="my-4 ">
+                      <div className="flex ">
                         <LuShoppingCart className="mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">Negozi</h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>Market</li>
                         <li>Pizzaria</li>
                         <li>Panificio</li>
@@ -495,12 +497,12 @@ export default function Home() {
                         <li>Centro estetico</li>
                       </ol>
                     </div>
-                    <div className=" mt-4">
-                      <div className=" flex">
-                        <LuLanguages className=" mt-1 mr-2" />
+                    <div className="mt-4 ">
+                      <div className="flex ">
+                        <LuLanguages className="mt-1 mr-2 " />
                         <h6 className=" text-lg font-[600]">Lingue parlate</h6>
                       </div>
-                      <ol className=" list-disc ml-5">
+                      <ol className="ml-5 list-disc ">
                         <li>Inglese</li>
                         <li>Italiano</li>
                       </ol>
@@ -511,10 +513,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <div className=" h-5 bg-olive/80 "></div> */}
+        {/* <div className="h-5 bg-olive/80"></div> */}
         <section id="gallery">
           <div className="flex justify-center items-center text-center font-[500] bg-grigio w-full pt-8 pb-6">
-            <div className=" flex flex-col justify-center items-center max-w-4xl">
+            <div className="flex flex-col items-center justify-center max-w-4xl ">
               <h5 className=" text-[25px] font-[600] sm:text-[50px]">
                 Galleria Foto
               </h5>
@@ -527,14 +529,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className=" h-5 bg-olive/80 "></div>
+        <div className="h-5 bg-olive/80"></div>
         <section className="" id="mappa">
-          <div className=" sm:flex sm:justify-center bg-giallino py-4 px-6">
+          <div className="px-6 py-4 sm:flex sm:justify-center bg-giallino">
             <div className=" sm:flex sm:flex-col sm:justify-center sm:items-center sm:max-w-4xl">
               <h6 className=" text-3xl mb-4 sm:text-[50px] font-[800]">
                 Dove si trova...
               </h6>
-              <div className=" gap-4 pb-4">
+              <div className="gap-4 pb-4 ">
                 <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
                   Benvenuti nella nostra incantevole casa vacanze a Catania,
                   un'oasi di relax e divertimento a{" "}
@@ -587,7 +589,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <div className=" h-5 bg-olive/80 "></div>
+        <div className="h-5 bg-olive/80"></div>
         <section>
           <div className="flex flex-col p-4 font-sans sm:justify-center sm:items-center bg-grigio ">
             <h6 className=" text-olive p-3 mb-2 sm:mb-8 sm:mt-2 text-3xl sm:text-[50px] font-Bodoni font-[500] w-[400px] sm:w-full sm:text-center leading-10">
@@ -596,11 +598,11 @@ export default function Home() {
             <div className=" sm:max-w-5xl sm:flex sm:flex-col xl:flex-row sm:justify-center sm:items-center sm:gap-10 sm:w-full sm:mb-4">
               <div className="sm:h-[320px] p-3 ring-2 ring-olive rounded-sm shadow-xl mb-6 sm:mb-0">
                 <h2 className=" mb-2 text-[20px]">Edifici Culturali come:</h2>
-                <div className=" flex justify-between gap-4">
-                  <ol className=" ml-5 list-disc ">
+                <div className="flex justify-between gap-4 ">
+                  <ol className="ml-5 list-disc ">
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/Pu1534Q2QN6tp8MUA"
                       >
                         Parco Madre Teresa di Calcutta
@@ -608,7 +610,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/qgd1STJHMVbrskF26"
                       >
                         Fontana dei Malavoglia
@@ -617,7 +619,7 @@ export default function Home() {
 
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/GgWPV9AZvspZGcVu7"
                       >
                         Villa Bellini
@@ -625,7 +627,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/jiEg7RHsDLK4Lbqk6"
                       >
                         Palazzo del Toscano
@@ -633,7 +635,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/BenhtKkYiGbmg5mA8"
                       >
                         Anfiteatro Romano di Catania
@@ -641,7 +643,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/6Mq88VXiZkZYPn8V7"
                       >
                         Palazzo San Demetrio
@@ -649,7 +651,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/8FiMeuuZdKAsF1jd8"
                       >
                         Piazza dell'Università
@@ -657,7 +659,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/NsQ8qLwXYpCefVB29"
                       >
                         Palazzo Biscari
@@ -665,7 +667,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/juxqFohAYt6xdg1E7"
                       >
                         Piazza Duomo
@@ -688,10 +690,10 @@ export default function Home() {
               <div className="sm:h-[320px] p-3 ring-2 rounded-sm ring-olive shadow-xl mb-6 sm:mb-0">
                 <h6 className=" text-[20px]">Per la movida:</h6>
                 <div className=" flex justify-between sm:h-[248px]">
-                  <ol className=" ml-5 list-disc">
+                  <ol className="ml-5 list-disc ">
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/WXkh8FwdktDi7t3t7"
                       >
                         LungoMare di Catania
@@ -699,7 +701,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/DguCSKMWZUR6NHW19"
                       >
                         Porto Rossi
@@ -707,7 +709,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/626M1gcuvk8o1Ewi7"
                       >
                         Piazza Dante
@@ -715,7 +717,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/bogt5xpzACPLWJis5"
                       >
                         Teatro Romano Di Catania
@@ -723,7 +725,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/sMZrLdeZMiGqhEtM8"
                       >
                         Casa Museo di Giovanno Verga
@@ -731,7 +733,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/UAuh9PEso7AhT6yD7"
                       >
                         Castello Ursino
@@ -739,7 +741,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/W3oisgHJuYGFv4288"
                       >
                         Porta Garibaldi
@@ -747,7 +749,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/jXJNfg4ekavkxiwL6"
                       >
                         A Putia Dell'Ostello
@@ -769,10 +771,10 @@ export default function Home() {
               <div className="sm:h-[320px] p-3 ring-2 rounded-sm ring-olive shadow-xl">
                 <h6 className=" text-[20px]">Ristoranti:</h6>
                 <div className=" flex justify-between sm:h-[248px]">
-                  <ol className=" ml-5 list-disc">
+                  <ol className="ml-5 list-disc ">
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/BWYMcynVYYLzzyHfA"
                       >
                         Pizza Time
@@ -780,7 +782,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/5EivJQ83MUHfw5h36"
                       >
                         Al Braciere da donna Pippa
@@ -788,7 +790,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/e9nvEb4nF8S85mKx9"
                       >
                         Botanike Resturant
@@ -796,7 +798,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/tkGZpriYfkZhtRLa7"
                       >
                         Quattrochiacchiere
@@ -804,7 +806,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/jZAcpYWpwqDkoqyC6"
                       >
                         Gohan Catania
@@ -812,7 +814,7 @@ export default function Home() {
                     </li>
                     <li>
                       <a
-                        className=" underline hover:text-olive/50 underline-offset-2"
+                        className="underline hover:text-olive/50 underline-offset-2"
                         href="https://maps.app.goo.gl/cnMaRuG3oSHUVbiZ6"
                       >
                         I Dolci di Nonna Vincenza
@@ -835,88 +837,92 @@ export default function Home() {
               Catania, ma sentiti libero di chiedermi qualsiasi cosa su luoghi e
               attrazioni che ti piacerebbe visitare!!
             </p>
-            <Carousel className="w-full max-w-sm">
-              <CarouselContent className="-ml-1">
-                {Array.from({ length: 500 }).map((_, index) => (
-                  <CarouselItem key={index} className="pl-1 md:basis-1/3">
-                    <div className="p-1">
-                      <Card>
-                        <CardContent className="flex aspect-square items-center justify-center p-6">
-                          <span className="text-2xl font-semibold">
-                            {index + 1}
-                          </span>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
+            {/* <div className="h-full ">
+              <Carousel
+                className="max-w-4xl overflow-x-hidden"
+                opts={{
+                  align: "start",
+                  loop: true,
+                  infinite: true,
+                  swipe: true,
+                }}
+                orientation="horizontal"
+              >
+                <CarouselContent className="">
+                  {Array.from({ length: 10 }).map((_, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="p-2 md:basis-1/3"
+                    >
+                      <div className="">
+                        <Card className="">
+                          <CardContent className="p-1 rounded-sm ring-1 ring-olive bg-giallino">
+                            <img
+                              src={`https://picsum.photos/300/300?random=${
+                                index + 1
+                              }`}
+                              className="rounded-sm "
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-1" />
+                <CarouselNext className="absolute right-1"/>
+              </Carousel>
+            </div> */}
+            <div className="relative bg-center bg-no-repeat sm:h-full">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                  infinite: true,
+                  swipe: true,
+                }}
+                orientation="horizontal"
+                className="overflow-x-hidden sm:max-w-5xl"
+              >
+                <CarouselContent className="gap-2 mb-2 ">
+                  {/* Iterazione sugli items del carousel */}
+                  {Array.from({ length: 100 }).map((_, index) => (
+                    <CarouselItem
+                      key={index}
+                      className="flex items-center justify-center rounded-sm sm:px-0 sm:basis-1/3"
+                    >
+                      <img
+                        src={`https://picsum.photos/400/400?random=${
+                          index + 1
+                        }`}
+                        alt={`foto casa ${index + 1}`}
+                        className="sm:m-1 sm:ml-0 bg-giallino p-1 ring-1 rounded-sm ring-olive w-80 h-96 sm:w-[400px] mt-1 ml-4"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="absolute left-1" />
+                <CarouselNext className="absolute right-1" />
+              </Carousel>
+            </div>
           </div>
         </section>
-        <div className=" h-5 bg-olive/80 "></div>
+        <div className="h-5 bg-olive/80"></div>
         <section>
-          <div className=" sm:flex sm:flex-col sm:justify-center sm:items-center text-olive bg-giallino pb-32 p-6">
-            <h6 className=" text-[31px] w-[250px] sm:text-center sm:w-full sm:text-[50px] font-[500] leading-8 mb-4 sm:mb-14 sm:mt-6">
+          <div className="p-6 pb-20 text-olive bg-giallino">
+            <h6 className=" text-[31px] w-[250px] sm:text-center sm:w-full sm:text-[50px] font-[500] leading-8 mb-4 sm:mb-14 mt-6 sm:mt-6">
               Le opinioni dei nostri ospiti:
             </h6>
-            <div className="sm:flex sm:justify-center sm:items-center sm:gap-8 sm:max-w-4xl ">
-              <div className=" ring-2 rounded-sm ring-olive p-2 mb-4 shadow-2xl">
-                <p className=" font-sans text-[200] text-[16px] mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusantium, nobis rerum nostrum illo repellat ut officiis
-                  dicta repellendus eum! Quam!
-                </p>
-                <div className=" border w-full my-2 border-black"></div>
-                <div className=" flex text-xl justify-between mb-1">
-                  <h5 className=" ">L. Bianchi</h5>
-                  <div className="flex">
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black " />
-                  </div>
-                </div>
-              </div>
-              <div className=" ring-2 rounded-sm ring-olive p-2 mb-4 shadow-2xl">
-                <p className=" font-sans text-[200] text-[16px] mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusantium, nobis rerum nostrum illo repellat ut officiis
-                  dicta repellendus eum! Quam!
-                </p>
-                <div className=" border w-full my-2 border-black"></div>
-                <div className=" flex text-xl justify-between mb-1">
-                  <h5 className=" ">L.Verdi </h5>
-                  <div className="flex">
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black " />
-                  </div>
-                </div>
-              </div>
-              <div className=" ring-2 rounded-sm ring-olive p-2 mb-4 shadow-2xl">
-                <p className=" font-sans text-[200] text-[16px] mb-2">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Accusantium, nobis rerum nostrum illo repellat ut officiis
-                  dicta repellendus eum! Quam!
-                </p>
-                <div className=" border w-full my-2 border-black"></div>
-                <div className=" flex text-xl justify-between mb-1">
-                  <h5 className=" ">L.Rossi</h5>
-                  <div className="flex">
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black fill-yellow-500" />
-                    <Star className=" stroke-black " />
-                  </div>
-                </div>
-              </div>
+            {/* <div>
+              <details>
+                <summary>erry</summary>
+                  <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi atque sapiente quo illum necessitatibus assumenda, in id sunt iure eaque architecto porro fugiat itaque ipsam nesciunt. Pariatur sapiente praesentium obcaecati.
+                  </p>
+              </details>
+            </div> */}
+            <div className="max-w-5xl m-auto h-96">
+              <ReviewsCarousel />
             </div>
           </div>
         </section>
