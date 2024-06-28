@@ -4,7 +4,9 @@ const MapComponent = () => {
   return (
     <div className="relative w-full h-96 shadow-2xl">
       <iframe
-        src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.651141995531!2d15.09214131534365!3d37.50234298046878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13134f1a5a5a5a5a%3A0x400c455c71a41111!2sVia%20Novaluce%2C%2073%2C%2095030%20Catania%2C%20Italia!5e0!3m2!1sen!2sus!4v1677700655051!5m2!1sen!2sus&markers=color:orange%7Clabel:S%7CVia%20Novaluce%2C%207%2C%2095030%20Catania%2C%20Italia`}
+        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC_XRfIC1kXGHMwEbUYFKoO4R8LIVEeN4k&q=37.5393797,15.1001286`}
+        
+        /* src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.651141995531!2d15.1001286!3d37.5393797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13134f1a5a5a5a5a%3A0x400c455c71a41111!2sVia%20Novaluce%2C%2073%2C%2095030%20Catania%2C%20Italia!5e0!3m2!1sen!2sus!4v1677700655051!5m2!1sen!2sus&markers=color:orange%7Clabel:S%7CVia%20Novaluce%2C%207%2C%2095030%20Catania%2C%20Italia`} */
         width="100%"
         height="100%"
         style={{ border: "0" }}
@@ -13,28 +15,6 @@ const MapComponent = () => {
         className=" rounded-sm shadow-2xl ring-2 ring-olive"
         referrerPolicy="no-referrer-when-downgrade"
       />
-      {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-full p-2 shadow-lg">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 text-gray-800"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-          />
-        </svg>
-      </div> */}
     </div>
   );
 };

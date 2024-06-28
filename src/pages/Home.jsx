@@ -14,10 +14,8 @@ import MapComponent from "../components/MapComponent.jsx";
 import colors from "../components/colors.json";
 // import recensioni from "@/components/recensioni.json"
 import ReviewsCarousel from "../components/ReviewsCarousel.jsx";
-import images_catania from "../components/ui/images_catania.json";
+// import images_catania from "../components/ui/images_catania.json";
 import imagesCatania from "../components/ui/images_catania.js";
-
-import img from "@/assets/foto_catania/IMG-1.jpg";
 
 import {
   Carousel,
@@ -121,17 +119,6 @@ export default function Home() {
       cellulare,
       isChecked,
     };
-
-    // const templateParams = {
-    //   fromDate: fromDate.toLocaleDateString(), // Se emailjs richiede una stringa
-    //   toDate: toDate.toLocaleDateString(), // Se emailjs richiede una stringa
-    //   name,
-    //   email,
-    //   message,
-    //   cellulare,
-    //   isChecked,
-    // };
-
     emailjs.send(serviceId, templateId, templateParams, publicKey).then(
       (response) => {
         console.log("SUCCESS!", response.status, response.text);
@@ -202,12 +189,6 @@ export default function Home() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              {/* <div className="absolute z-40 -mt-[250px] ">
-                <CarouselPrevious
-                  className={`${colors.childObjects} w-8 h-8`}
-                />
-                <CarouselNext className={`${colors.childObjects} w-8 h-8`} />
-              </div> */}
             </Carousel>
           </div>
         </section>
@@ -445,7 +426,6 @@ export default function Home() {
                           Ampio parco di 30.000mq <br />
                           separato dal parcheggio{" "}
                         </li>
-                        <li>Fronte spiaggia</li>
                         <li>Balcone</li>
                         <li>Vista Città</li>
                         <li>Vista Giardino</li>
@@ -464,7 +444,6 @@ export default function Home() {
                         <li>Bagno privato</li>
                         <li>Prodotti da bagno in omaggio</li>
                         <li>Asciugacapelli</li>
-                        <li>Vasca o Doccia</li>
                       </ol>
                     </div>
                     <div className="my-4 ">
@@ -475,11 +454,9 @@ export default function Home() {
                       <ol className="ml-5 list-disc ">
                         <li>Tavolo da pranzo</li>
                         <li> Prodotti per le pulizie</li>
-                        <li>tostapane</li>
                         <li>Piano cottura</li>
                         <li>Bollitore</li>
                         <li>Cucina</li>
-                        <li>Lavatrice</li>
                         <li>Forno a microonde</li>
                         <li>Frigorifero</li>
                       </ol>
@@ -491,7 +468,6 @@ export default function Home() {
                       </div>
                       <ol className="ml-5 list-disc ">
                         <li>Market</li>
-                        <li>Pizzaria</li>
                         <li>Panificio</li>
                         <li>Ristorante</li>
                         <li>Meccanico</li>
@@ -516,7 +492,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* <div className="h-5 bg-olive/80"></div> */}
         <section id="gallery">
           <div className="flex justify-center items-center text-center font-[500] bg-grigio w-full pt-8 pb-6">
             <div className="flex flex-col items-center justify-center max-w-4xl ">
@@ -566,9 +541,8 @@ export default function Home() {
                   splendido panorama del mare, mentre il centro storico con le
                   sue stradine pittoresche e i suoi monumenti storici{" "}
                   <span className=" text-olive font-[600]">
-                    si trova a breve distanza
-                  </span>{" "}
-                  e facilmente raggiungibile a piedi.
+                    si trova a breve distanza.
+                  </span>
                 </p>
                 <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
                   E quando cala il sole,{" "}
@@ -840,42 +814,6 @@ export default function Home() {
               Catania, ma sentiti libero di chiedermi qualsiasi cosa su luoghi e
               attrazioni che ti piacerebbe visitare!!
             </p>
-            {/* <div className="h-full ">
-              <Carousel
-                className="max-w-4xl overflow-x-hidden"
-                opts={{
-                  align: "start",
-                  loop: true,
-                  infinite: true,
-                  swipe: true,
-                }}
-                orientation="horizontal"
-              >
-                <CarouselContent className="">
-                  {Array.from({ length: 10 }).map((_, index) => (
-                    <CarouselItem
-                      key={index}
-                      className="p-2 md:basis-1/3"
-                    >
-                      <div className="">
-                        <Card className="">
-                          <CardContent className="p-1 rounded-sm ring-1 ring-olive bg-giallino">
-                            <img
-                              src={`https://picsum.photos/300/300?random=${
-                                index + 1
-                              }`}
-                              className="rounded-sm "
-                            />
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
-                </CarouselContent>
-                <CarouselPrevious className="absolute left-1" />
-                <CarouselNext className="absolute right-1"/>
-              </Carousel>
-            </div> */}
             <div className="relative bg-center bg-no-repeat sm:h-full">
               <Carousel
                 opts={{
@@ -893,19 +831,21 @@ export default function Home() {
                       key={index}
                       className="flex items-center justify-center rounded-sm sm:px-0 sm:basis-1/3"
                     >
-                      <div className=" flex flex-col-reverse justify-center items-center bg-giallino p-2 pb-8 rounded-sm pt-4 px-6">
-                        <h6 className=" bg-olive/20 w-[96%] rounded-sm font-Bodoni font-[600] text-center py-1 z-50 -mt-10">{items.title}</h6>
+                      <div className="flex flex-col-reverse items-center justify-center p-2 px-6 pt-4 pb-8 rounded-sm ">
+                        <h6 className="w-[96%] rounded-sm text-xl mt-6 font-Bodoni font-[600] text-center py-1 z-50">
+                          {items.title}
+                        </h6>
                         <img
                           src={items.url}
                           alt={`foto catania ${index + 1}`}
-                          className="sm:m-1 sm:ml-0 bg-no-repeat bg-contain shadow-2xl bg-giallino p-2 pb-12 ring-1 rounded-sm ring-olive h-[600px] sm:w-[400px] mt-1"
+                          className="sm:m-1 sm:ml-0 bg-no-repeat bg-contain shadow-2xl bg-giallino p-2 ring-1 rounded-sm ring-olive h-[600px] sm:w-[400px] mt-1"
                         />
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="absolute left-1 shadow-xl" />
-                <CarouselNext className="absolute right-1 shadow-xl" />
+                <CarouselPrevious className="absolute shadow-xl left-1" />
+                <CarouselNext className="absolute shadow-xl right-1" />
               </Carousel>
             </div>
           </div>
@@ -916,14 +856,6 @@ export default function Home() {
             <h6 className=" text-[31px] w-[250px] sm:text-center sm:w-full sm:text-[50px] font-[500] leading-8 mb-4 sm:mb-14 mt-6 sm:mt-6">
               Le opinioni dei nostri ospiti:
             </h6>
-            {/* <div>
-              <details>
-                <summary>erry</summary>
-                  <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi atque sapiente quo illum necessitatibus assumenda, in id sunt iure eaque architecto porro fugiat itaque ipsam nesciunt. Pariatur sapiente praesentium obcaecati.
-                  </p>
-              </details>
-            </div> */}
             <div className="max-w-5xl m-auto h-96">
               <ReviewsCarousel />
             </div>
@@ -938,9 +870,10 @@ export default function Home() {
   /*
   cosa da aggiungere
   -prezzo e valutazione booking in home page  V
-  - aggiunta descrizione confort casa O
-  -carosello attrazioni + descrizione 
+  - aggiunta descrizione confort casa V
+  -carosello attrazioni + descrizione V
   -aggiunta ristoranti
-  -rivalutare recensioni clienti (dissolvenza con possibilità di vederle tutte al click) stile AppStore
+  -rivalutare recensioni clienti (dissolvenza con possibilità di vederle tutte al click) stile AppStore V
+  -Google My Business: Registra la tua casa vacanze su Google My Business per apparire nelle ricerche locali.
 */
 }

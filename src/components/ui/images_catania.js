@@ -1,18 +1,18 @@
-import IMG_1 from "../../assets/foto_catania/IMG-1.jpg";
-import IMG_2 from "../../assets/foto_catania/IMG-2.jpg";
-import IMG_3 from "../../assets/foto_catania/IMG-3.jpg";
-import IMG_4 from "../../assets/foto_catania/IMG-4.jpg";
-import IMG_5 from "../../assets/foto_catania/IMG-5.jpg";
-import IMG_6 from "../../assets/foto_catania/IMG-6.jpg";
-import IMG_7 from "../../assets/foto_catania/IMG-7.jpg";
-import IMG_8 from "../../assets/foto_catania/IMG-8.jpg";
-import IMG_9 from "../../assets/foto_catania/IMG-9.jpg";
-import IMG_10 from "../../assets/foto_catania/IMG-10.jpg";
-import IMG_11 from "../../assets/foto_catania/IMG-11.jpg";
-import IMG_12 from "../../assets/foto_catania/IMG-12.jpg";
-import IMG_13 from "../../assets/foto_catania/IMG-13.jpg";
-import IMG_14 from "../../assets/foto_catania/IMG-14.jpg";
-import IMG_15 from "../../assets/foto_catania/IMG-15.jpg";
+import IMG_1 from "../../assets/foto_catania/IMG-1.gif";
+import IMG_2 from "../../assets/foto_catania/IMG-2.gif";
+import IMG_3 from "../../assets/foto_catania/IMG-3.gif";
+import IMG_4 from "../../assets/foto_catania/IMG-4.gif";
+import IMG_5 from "../../assets/foto_catania/IMG-5.gif";
+import IMG_6 from "../../assets/foto_catania/IMG-6.gif";
+import IMG_7 from "../../assets/foto_catania/IMG-7.gif";
+import IMG_8 from "../../assets/foto_catania/IMG-8.gif";
+import IMG_9 from "../../assets/foto_catania/IMG-9.gif";
+import IMG_10 from "../../assets/foto_catania/IMG-10.gif";
+import IMG_11 from "../../assets/foto_catania/IMG-11.gif";
+import IMG_12 from "../../assets/foto_catania/IMG-12.gif";
+import IMG_13 from "../../assets/foto_catania/IMG-13.gif";
+import IMG_14 from "../../assets/foto_catania/IMG-14.gif";
+import IMG_15 from "../../assets/foto_catania/IMG-15.gif";
 
 // aggiungi tutte le altre immagini qui
 
@@ -43,7 +43,7 @@ const images_catania = [
     url: IMG_5
   },
   {
-    title: "Fontana Dell'Elefante ('U Liotru)",
+    title: `Fontana Dell'Elefante`,
     description: "Descrizione dell'immagine 6",
     url: IMG_6
   },
