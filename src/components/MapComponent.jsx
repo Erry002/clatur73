@@ -1,27 +1,50 @@
-import React from "react";
+import React, { useEffect } from 'react';
 
 const MapComponent = () => {
+  useEffect(() => {
+    // Carica lo script di Google Maps
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyDRuV91jIeATXFDYrouZcQs1BcDk98Bqbo&callback=initMap&libraries=maps,marker&v=beta`;
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Callback per inizializzare la mappa
+    window.initMap = function () {
+      const map = new window.google.maps.Map(document.getElementById('map'), {
+        center: { lat: 37.53925323486328, lng: 15.10033893585205 },
+        zoom: 16,
+        mapId: 'DEMO_MAP_ID'
+      });
+
+      const marker = new window.google.maps.marker.AdvancedMarkerElement({
+        map,
+        position: { lat: 37.53925323486328, lng: 15.10033893585205 },
+        title: 'My location'
+      });
+
+      marker.addListener('click', () => {
+        const url = `https://www.google.com/maps/dir/?api=1&destination=37.53925323486328,15.10033893585205&travelmode=driving`;
+        window.open(url, '_blank');
+      });
+    };
+
+    return () => {
+      // Rimozione del callback e del script se necessario
+      delete window.initMap;
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
-    <div className="relative w-full h-96 shadow-2xl">
-      <iframe
-        src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyC_XRfIC1kXGHMwEbUYFKoO4R8LIVEeN4k&q=37.5393797,15.1001286`}
-        
-        /* src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3174.651141995531!2d15.1001286!3d37.5393797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13134f1a5a5a5a5a%3A0x400c455c71a41111!2sVia%20Novaluce%2C%2073%2C%2095030%20Catania%2C%20Italia!5e0!3m2!1sen!2sus!4v1677700655051!5m2!1sen!2sus&markers=color:orange%7Clabel:S%7CVia%20Novaluce%2C%207%2C%2095030%20Catania%2C%20Italia`} */
-        width="100%"
-        height="100%"
-        style={{ border: "0" }}
-        allowFullScreen=""
-        loading="lazy"
-        className=" rounded-sm shadow-2xl ring-2 ring-olive"
-        referrerPolicy="no-referrer-when-downgrade"
-      />
+    <div className="w-full h-full ring-1 ring-olive">
+      <div id="map" className="w-full h-96"></div>
     </div>
   );
 };
 
 export default MapComponent;
-
 /*
+AIzaSyDRuV91jIeATXFDYrouZcQs1BcDk98Bqbo
     L'API di Google Maps non è completamente gratuita. Google offre una versione gratuita dell'API con alcune limitazioni, ma se si superano queste limitazioni, è necessario pagare una tariffa per l'utilizzo dell'API.
 
 Ecco le principali limitazioni della versione gratuita dell'API di Google Maps:

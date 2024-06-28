@@ -1,122 +1,20 @@
 [
     {
-        "username": "Mario Rossi",
+        "username": "Conti",
         "stars": 5,
-        "date": "2024-01-01",
+        "date": "2024-01-04",
         "review": "Ottimo soggiorno! Servizio impeccabile."
     },
     {
-        "username": "Luca Bianchi",
-        "stars": 4,
-        "date": "2024-01-05",
-        "review": "Struttura accogliente e personale cortese."
-    },
-    {
-        "username": "Giulia Verdi",
-        "stars": 3,
-        "date": "2024-01-10",
-        "review": "Camere pulite ma il cibo potrebbe migliorare."
-    },
-    {
-        "username": "Federica Neri",
-        "stars": 4,
-        "date": "2024-01-15",
-        "review": "Posizione ottima, tornerò sicuramente."
-    },
-    {
-        "username": "Marco Gialli",
-        "stars": 2,
-        "date": "2024-01-20",
-        "review": "Esperienza deludente, servizio clienti scadente."
-    },
-    {
-        "username": "Elena Blu",
+        "username": "Agency",
         "stars": 5,
-        "date": "2024-01-25",
-        "review": "Tutto perfetto, super consigliato!"
+        "date": "2023-12-30",
+        "review": "Struttura accogliente e host cortese."
     },
     {
-        "username": "Davide Grigi",
-        "stars": 4,
-        "date": "2024-01-30",
-        "review": "Molto buono, ma un po' caro."
-    },
-    {
-        "username": "Laura Marroni",
-        "stars": 3,
-        "date": "2024-02-01",
-        "review": "Struttura nella media, niente di speciale."
-    },
-    {
-        "username": "Andrea Rosa",
+        "username": "Silvia",
         "stars": 5,
-        "date": "2024-02-05",
-        "review": "Esperienza fantastica, tornerò sicuramente!"
-    },
-    {
-        "username": "Sara Viola",
-        "stars": 4,
-        "date": "2024-02-10",
-        "review": "Buona struttura, personale gentile."
-    },
-    {
-        "username": "Lorenzo Verde",
-        "stars": 3,
-        "date": "2024-02-15",
-        "review": "Soggiorno piacevole, ma con alcuni inconvenienti."
-    },
-    {
-        "username": "Martina Azzurri",
-        "stars": 5,
-        "date": "2024-02-20",
-        "review": "Eccellente sotto ogni punto di vista."
-    },
-    {
-        "username": "Riccardo Neri",
-        "stars": 2,
-        "date": "2024-02-25",
-        "review": "Non sono rimasto soddisfatto, troppi problemi."
-    },
-    {
-        "username": "Alessia Grigi",
-        "stars": 4,
-        "date": "2024-03-01",
-        "review": "Buona esperienza, ma potrebbe migliorare."
-    },
-    {
-        "username": "Giorgio Gialli",
-        "stars": 3,
-        "date": "2024-03-05",
-        "review": "Nella media, nulla di eccezionale."
-    },
-    {
-        "username": "Valentina Rossi",
-        "stars": 5,
-        "date": "2024-03-10",
-        "review": "Assolutamente perfetto, lo consiglio a tutti."
-    },
-    {
-        "username": "Claudio Bianchi",
-        "stars": 4,
-        "date": "2024-03-15",
-        "review": "Buona posizione e ottimo servizio."
-    },
-    {
-        "username": "Marta Verdi",
-        "stars": 2,
-        "date": "2024-03-20",
-        "review": "Non all'altezza delle aspettative."
-    },
-    {
-        "username": "Simone Neri",
-        "stars": 5,
-        "date": "2024-03-25",
-        "review": "Tutto perfetto, dal check-in al check-out."
-    },
-    {
-        "username": "Chiara Blu",
-        "stars": 4,
-        "date": "2024-03-30",
-        "review": "Ottima struttura, ci tornerei volentieri."
+        "date": "2024-05-30",
+        "review": "Camere pulite e host disponibilissimo"
     }
 ]

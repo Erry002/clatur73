@@ -25,9 +25,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import casa_1 from "../assets/casa_1.jpeg";
-import casa_2 from "../assets/casa_2.jpeg";
-import casa_3 from "../assets/casa_3.jpeg";
+import casa_1 from "../assets/foto_casa_carmelo/casa_15.jpeg";
+import casa_2 from "../assets/foto_casa_carmelo/casa_19.jpeg";
+import casa_3 from "../assets/foto_casa_carmelo/casa_3.jpeg";
+import casa_6 from "../assets/foto_casa_carmelo/casa_6.jpeg";
+import casa_13 from "../assets/foto_casa_carmelo/casa_13.jpeg";
 import elli from "../assets/ellisse_modificato_1.png";
 import elli2 from "../assets/ellisse_modificato_2.png";
 import { Star } from "lucide-react";
@@ -46,7 +48,7 @@ import {
   LuWifi,
 } from "react-icons/lu";
 
-const images = [casa_1, casa_2, casa_3];
+const images = [casa_1, casa_2, casa_3, casa_6, casa_13];
 
 export default function Home() {
   const [selectedDates, setSelectedDates] = useState({ from: null, to: null });
@@ -176,7 +178,7 @@ export default function Home() {
                     <div className="">
                       <Card>
                         <CardContent
-                          className={`flex w-full h-[500px] sm:h-[900px]  items-center justify-center`}
+                          className={`flex w-full h-[600px] sm:h-[1050px]  items-center justify-center`}
                         >
                           <img
                             src={image}
