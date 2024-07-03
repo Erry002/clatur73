@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as React from "react";
-import emailjs from "emailjs-com";
+import emailjs from '@emailjs/browser';
 
 import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent } from "@/components/ui/card";
