@@ -426,7 +426,7 @@ export default function Home() {
                       <ol className="ml-5 list-disc ">
                         <li>
                           Ampio parco di 30.000mq <br />
-                          separato dal parcheggio{" "}
+                          separato dal parcheggio, ideale per <br /> passeggiate rilassanti e jogging {" "}
                         </li>
                         <li>Balcone</li>
                         <li>Vista Città</li>
@@ -446,6 +446,7 @@ export default function Home() {
                         <li>Bagno privato</li>
                         <li>Prodotti da bagno in omaggio</li>
                         <li>Asciugacapelli</li>
+                        <li>Doccia e Vasca da bagno</li>
                       </ol>
                     </div>
                     <div className="my-4 ">
