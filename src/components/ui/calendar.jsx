@@ -1,10 +1,10 @@
 "use client";
-import * as React from "react"
-import { ChevronLeft, ChevronRight } from "lucide-react"
-import { DayPicker } from "react-day-picker"
+import * as React from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { DayPicker } from "react-day-picker";
 
-import { cn } from "@/lib/utils"
-import { buttonVariants } from "@/components/ui/button"
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
 
 function Calendar({
   className,
@@ -13,7 +13,7 @@ function Calendar({
   ...props
 }) {
   return (
-    (<DayPicker
+    <DayPicker
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{
@@ -41,7 +41,7 @@ function Calendar({
         day_range_end: "day-range-end",
         day_selected:
           "text-black text-primary-foreground hover:bg-olive hover:text-primary-foreground focus:bg-olive focus:text-primary-foreground",
-        day_today: " bg-olive/20 text-accent-foreground",
+        day_today: "bg-olive/20 text-accent-foreground",
         day_outside:
           "day-outside text-muted-foreground opacity-100 aria-selected:bg-accent/100 aria-selected:text-muted-foreground aria-selected:opacity-80",
         day_disabled: "text-muted-foreground opacity-100",
@@ -51,12 +51,14 @@ function Calendar({
         ...classNames,
       }}
       components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
+        IconLeft: (props) => <ChevronLeft className="w-4 h-4" {...props} />,
+        IconRight: (props) => <ChevronRight className="w-4 h-4" {...props} />,
       }}
-      {...props} />)
+      {...props}
+    />
   );
 }
-Calendar.displayName = "Calendar"
 
-export { Calendar }
+Calendar.displayName = "Calendar";
+
+export { Calendar };
