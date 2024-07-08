@@ -108,9 +108,9 @@ export default function Home() {
     // console.log("Delle cose: ", selectedDates.from);
     // console.log("Delle cose: ", selectedDates.to);
 
-    const serviceId = "service_hozzjlm";
+    const serviceId = "service_jjmpd1b";
     const templateId = "template_u42rl68";
-    const publicKey = "vjw7dcQJizcn3ce0Z";
+    const publicKey = "jk-dlJfpuvQlKnabS";
 
     const templateParams = {
       fromDate,
@@ -156,9 +156,7 @@ export default function Home() {
                 <p className="absolute text-white top-[240px] sm:top-[480px] md:top-[420px] xl:top-[420px] font-[400] left-14 text-lg sm:text-[24px]">
                   Casa vacanza con calore, confort e carattere
                 </p>
-                <div className="absolute text-xl text-white bottom-24 left-12 sm:bottom-20">
-                  <p>Camere a partire da: 50€</p>
-                </div>
+                
                 <div className="absolute text-xl text-white bottom-16 left-12 sm:right-12 sm:left-auto sm:bottom-20 ">
                   <h6 className="">Valutazione da Booking</h6>
                   <div className="absolute">
@@ -166,8 +164,8 @@ export default function Home() {
                       <Star className=" fill-giallino stroke-giallino/90" />
                       <Star className=" fill-giallino stroke-giallino/90" />
                       <Star className=" fill-giallino stroke-giallino/90" />
-                      <Star className=" stroke-giallino/90" />
-                      <Star className=" stroke-giallino/90" />
+                      <Star className=" fill-giallino stroke-giallino/90" />
+                      <Star className=" fill-giallino stroke-giallino/90" />
                     </div>
                   </div>
                 </div>
@@ -299,7 +297,7 @@ export default function Home() {
                 </span>
                 sul paesaggio circostante, con scorci sul mare che aggiungono un
                 tocco di serenità. Gli interni sono caratterizzati da ampi spazi
-                aperti, pavimenti in piastrelle lucide e un
+                aperti, pavimenti in gres porcellanato lucido e un
                 <span className=" text-olive font-[600]">
                   {" "}
                   design minimalista{" "}
@@ -314,7 +312,7 @@ export default function Home() {
                 Tutti i servizi che offriamo
               </h5>
               <div className="font-sans">
-                <div className="flex flex-col gap-4 p-2 px-6 mb-4 rounded-t-sm bg-grigio/30 sm:flex-row ring-1 ring-olive">
+                <div className="flex flex-col gap-4 p-6 px-6 mb-4 rounded-t-sm bg-grigio/30 sm:flex-row ring-1 ring-olive">
                   <div>
                     <div className="flex ">
                       <LuParkingCircle className="mt-1 mr-2 " />
@@ -369,6 +367,7 @@ export default function Home() {
                         <li>Scrivania</li>
                         <li>Zona Soggiorno</li>
                         <li>Zona Pranzo</li>
+                        <li>Pavimento in gres <br />porcellanato lucido</li>
                       </ol>
                     </div>
                     <div className="my-4 ">
@@ -381,7 +380,7 @@ export default function Home() {
                       <ol className="ml-5 list-disc ">
                         <li>Stendibiancheria</li>
                         <li>Stand appendiabiti</li>
-                        <li>Ferro e asse da stiro</li>
+                        <li>Asse da stiro</li>
                         <li>Ferro da stiro</li>
                       </ol>
                     </div>
@@ -519,10 +518,10 @@ export default function Home() {
               </h6>
               <div className="gap-4 pb-4 ">
                 <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
-                  Benvenuti nella nostra incantevole casa vacanze a Catania,
+                  Benvenuti nella mia incantevole casa vacanze a Catania,
                   un'oasi di relax e divertimento a{" "}
                   <span className=" text-olive font-[600]">
-                    pochi chilometri dal mare
+                    pochi minuti dal mare
                   </span>{" "}
                   e dal centro storico. Situata in una posizione privilegiata,
                   potrai goderti la bellezza delle spiagge catanesi e
@@ -535,20 +534,18 @@ export default function Home() {
                   piacevole e rilassante.
                 </p>
                 <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
-                  Dotata di spazi luminosi e accoglienti, offre un ambiente
+                  Dotata di ampi spazi luminosi e accoglienti, offre un ambiente
                   <span className=" text-olive font-[600]">
                     {" "}
                     ideale per famiglie
                   </span>
-                  , gruppi di amici o coppie. Dalle finestre potrai ammirare lo
+                  , gruppi di amici o coppie. Già dall'interno della casa, si può ammirare lo
                   splendido panorama del mare, mentre il centro storico con le
                   sue stradine pittoresche e i suoi monumenti storici{" "}
                   <span className=" text-olive font-[600]">
-                    si trova a breve distanza.
+                    si trova a breve distanza. <br />
                   </span>
-                </p>
-                <p className=" font-sans font-[200] text-[16] sm:text-[20px] mb-8">
-                  E quando cala il sole,{" "}
+                  Quando cala il sole,{" "}
                   <span className=" text-olive font-[600]">
                     la movida notturna
                   </span>{" "}
@@ -557,11 +554,14 @@ export default function Home() {
                   <span className=" text-olive font-[600]">
                     assaporare la cucina locale
                   </span>{" "}
-                  e vivere la vera anima della città. Non vediamo l'ora di darti
-                  il benvenuto nella nostra casa vacanze e farti scoprire tutte
-                  le meraviglie di Catania!
+                  e vivere la vera anima della città.
                 </p>
               </div>
+              <h6 className=" text-3xl mb-4 sm:text-[40px] font-[600]">Quindi, cosa aspetti!</h6>
+              <p className=" font-sans font-[300] w-[500px] text-center text-[18] sm:text-[20px] mb-12">
+                Non vedo l'ora di darti il <span className=" text-olive font-[600]"> benvenuto </span> nella mia casa vacanze e farti scoprire tutte
+                le meraviglie di Catania!
+              </p>
               {/* <div className=" bg-olive h-[400px] w-full text-white items-center flex justify-center">
                 Maps
               </div> */}

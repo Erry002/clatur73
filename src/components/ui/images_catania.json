@@ -73,7 +73,7 @@
         {
             "title": "Titolo 15",
             "description": "Descrizione dell'immagine 15.",
-            "url": "../../assets/foto_catania/IMG-15.jpg"
+            "url": "/assets/foto_catania/IMG-15.jpg"
         }
     ]
 }

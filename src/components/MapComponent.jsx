@@ -44,7 +44,6 @@ const MapComponent = () => {
 
 export default MapComponent;
 /*
-AIzaSyDRuV91jIeATXFDYrouZcQs1BcDk98Bqbo
     L'API di Google Maps non è completamente gratuita. Google offre una versione gratuita dell'API con alcune limitazioni, ma se si superano queste limitazioni, è necessario pagare una tariffa per l'utilizzo dell'API.
 
 Ecco le principali limitazioni della versione gratuita dell'API di Google Maps:
