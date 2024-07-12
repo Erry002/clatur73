@@ -27,7 +27,7 @@ function Gallery() {
   }
 
   return (
-    <div className="relative sm:h-full bg-no-repeat bg-center">
+    <div className="relative bg-center bg-no-repeat sm:h-full">
       <Carousel
         opts={{
           align: "start",
@@ -36,20 +36,20 @@ function Gallery() {
           swipe: true,
         }}
         orientation="horizontal"
-        className=" max-w-4xl overflow-x-hidden"
+        className="max-w-4xl overflow-x-hidden "
       >
-        <CarouselContent className=" gap-2 mb-2">
+        <CarouselContent className="gap-2 mb-2 ">
           {/* Iterazione sugli items del carousel */}
           {images.map((image, index) => (
             <CarouselItem
               key={index}
-              className=" flex px-72 sm:px-0 sm:basis-1/3 justify-center rounded-sm items-center"
+              className="flex items-center justify-center rounded-sm px-72 sm:px-0 w-[500px] sm:basis-1/3"
             >
               {/* Contenuto del singolo item del carousel */}
               <img
                 src={image}
                 alt={`foto casa ${index + 1}`}
-                className="sm:m-1 sm:ml-0 bg-giallino p-1 ring-1 rounded-sm ring-olive h-96 w-96 mt-1 ml-4"
+                className="object-cover p-1 rounded-sm sm:m-1 sm:ml-0 bg-giallino ring-1 ring-olive h-96 "
               />
             </CarouselItem>
           ))}

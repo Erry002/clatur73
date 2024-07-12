@@ -25,12 +25,14 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-import casa_1 from "../assets/foto_casa_carmelo/casa_15.jpeg";
-import casa_2 from "../assets/foto_casa_carmelo/casa_19.jpeg";
-import casa_3 from "../assets/foto_casa_carmelo/casa_3.jpeg";
-import casa_6 from "../assets/foto_casa_carmelo/casa_6.jpeg";
-import casa_13 from "../assets/foto_casa_carmelo/casa_13.jpeg";
-import elli from "../assets/ellisse_modificato_1.png";
+import casa_1 from "../assets/foto_casa_carmelo/casa_1.jpg";
+import casa_2 from "../assets/foto_casa_carmelo/casa_2.jpg";
+import casa_3 from "../assets/foto_casa_carmelo/casa_9.jpg";
+import casa_6 from "../assets/foto_casa_carmelo/casa_17.jpg";
+import casa_13 from "../assets/foto_casa_carmelo/casa_16.jpg";
+import casa_fuori from "../assets/foto_casa_carmelo/casa_fuori.jpeg";
+import casa_fuori_2 from "../assets/foto_casa_carmelo/casa_fuori_2.jpeg";
+// import elli from "../assets/ellisse_modificato_1.png";
 import elli2 from "../assets/ellisse_modificato_2.png";
 import { Star } from "lucide-react";
 import {
@@ -48,7 +50,7 @@ import {
   LuWifi,
 } from "react-icons/lu";
 
-const images = [casa_1, casa_2, casa_3, casa_6, casa_13];
+const images = [casa_1, casa_2, casa_3, casa_6, casa_13, casa_fuori, casa_fuori_2];
 
 export default function Home() {
   const [selectedDates, setSelectedDates] = useState({ from: null, to: null });
@@ -841,7 +843,7 @@ export default function Home() {
                         <img
                           src={items.url}
                           alt={`foto catania ${index + 1}`}
-                          className="sm:m-1 sm:ml-0 bg-no-repeat bg-contain shadow-2xl bg-giallino p-2 ring-1 rounded-sm ring-olive h-[600px] sm:w-[400px] mt-1"
+                          className="sm:m-1 sm:ml-0 object-cover shadow-2xl bg-giallino p-2 ring-1 rounded-sm ring-olive h-[600px] sm:w-[400px] mt-1"
                         />
                       </div>
                     </CarouselItem>
