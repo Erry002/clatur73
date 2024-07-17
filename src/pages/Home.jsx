@@ -41,10 +41,12 @@ import {
   LuBus,
   LuChefHat,
   LuDog,
+  LuFrame,
   LuHome,
   LuLanguages,
   LuPalmtree,
   LuParkingCircle,
+  LuPersonStanding,
   LuShoppingCart,
   LuShowerHead,
   LuWifi,
@@ -413,6 +415,7 @@ export default function Home() {
                             a pagamento
                           </span>
                         </li>
+                        <li>Fermata Bus</li>
                         <li>Autonoleggio</li>
                         <li>Navetta Aereoportuale</li>
                       </ol>
@@ -467,19 +470,26 @@ export default function Home() {
                     </div>
                     <div className="my-4 ">
                       <div className="flex ">
+                        <LuPersonStanding className="mt-1 -ml-1 size-6" />
+                        <h6 className=" text-lg font-[600]">Salute e Benessere</h6>
+                      </div>
+                      <ol className="ml-5 list-disc ">
+                        <li>Lavanderia</li>
+                        <li>Farmacia</li>
+                        <li>Parrucchiere</li>
+                        <li>Centro estetico</li>
+                      </ol>
+                    </div>
+                    <div className="my-4 ">
+                      <div className="flex ">
                         <LuShoppingCart className="mt-1 mr-2" />
                         <h6 className=" text-lg font-[600]">Negozi</h6>
                       </div>
                       <ol className="ml-5 list-disc ">
-                        <li>Market</li>
-                        <li>Lavanderia</li>
-                        <li>Farmacia</li>
+                        <li>Supermercato</li>
                         <li>Panificio</li>
                         <li>Ristorante</li>
                         <li>Meccanico</li>
-                        <li>Fermata Bus</li>
-                        <li>Parrucchiere</li>
-                        <li>Centro estetico</li>
                       </ol>
                     </div>
                     <div className="mt-4 ">
