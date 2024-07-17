@@ -421,7 +421,7 @@ export default function Home() {
                       <div className="flex ">
                         <LuPalmtree className="mt-1 mr-2" />
                         <h6 className="text-lg font-[600]">
-                          Spazzi all'aperto
+                          Spazi all'aperto
                         </h6>
                       </div>
                       <ol className="ml-5 list-disc ">
@@ -457,7 +457,7 @@ export default function Home() {
                       </div>
                       <ol className="ml-5 list-disc ">
                         <li>Tavolo da pranzo</li>
-                        <li> Prodotti per le pulizie</li>
+                        <li>Prodotti per le pulizie</li>
                         <li>Piano cottura</li>
                         <li>Bollitore</li>
                         <li>Cucina</li>
@@ -472,6 +472,8 @@ export default function Home() {
                       </div>
                       <ol className="ml-5 list-disc ">
                         <li>Market</li>
+                        <li>Lavanderia</li>
+                        <li>Farmacia</li>
                         <li>Panificio</li>
                         <li>Ristorante</li>
                         <li>Meccanico</li>
