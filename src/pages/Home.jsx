@@ -884,13 +884,4 @@ export default function Home() {
 }
 
 {
-  /*
-  cosa da aggiungere
-  -prezzo e valutazione booking in home page  V
-  - aggiunta descrizione confort casa V
-  -carosello attrazioni + descrizione V
-  -aggiunta ristoranti
-  -rivalutare recensioni clienti (dissolvenza con possibilità di vederle tutte al click) stile AppStore V
-  -Google My Business: Registra la tua casa vacanze su Google My Business per apparire nelle ricerche locali.
-*/
 }
